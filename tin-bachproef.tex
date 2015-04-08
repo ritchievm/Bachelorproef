@@ -78,20 +78,20 @@
 %% Vul dit aan met je eigen info:
 
 % Je eigen naam
-\newcommand{\student}{Piet Pieters}
+\newcommand{\student}{Ritchie Van Mele}
 
 % De naam van je lector, begeleider, promotor
-\newcommand{\promotor}{Bert Van Vreckem}
+\newcommand{\promotor}{Johan Decorte}
 
 % De naam van je co-promotor
-\newcommand{\copromotor}{Jan Janssen}
+\newcommand{\copromotor}{Krist Vanneste}
 
 % Indien je bachelorproef in opdracht van een bedrijf of organisatie
 % geschreven is, geef je hier de naam.
 \newcommand{\instelling}{---}
 
 % De titel van het rapport/bachelorproef
-\newcommand{\titel}{Titel}
+\newcommand{\titel}{Wat is VOIP en hoe beveilig ik mijn netwerk hiervoor}
 
 % Datum van indienen
 \newcommand{\datum}{29 mei 2015}
@@ -180,14 +180,18 @@
 % thesis) synthese van het document. In ons geval beschrijf je kort de
 % probleemstelling en de context, de onderzoeksvragen, de aanpak en de
 % resultaten.
-  \lipsum[1-4]
+
+Deze bachlorproef draait rond voice over IP(VOIP). In deze proef stel ik mezelf vragen en tracht daarop antwoorden te vinden. Ik ga trachten duidelijk te maken wat VOIP is en hoe ze verschilt van traditionele telefonie. Bij VOIP wordt de telefonie over een netwerk gestuurd. Ik ga dan ook onderzoeken welke invloed VOIP heeft op dit netwerk en of dit een probleem geeft voor je beveiliging. Beveiliging zowel t.o.v. het bestaande netwerk maar ook ten opzichte van je telefonie. Dan ga ik ook kijken naar op welke manieren je een onbeveiligd VOIP netwerk kan misbruiken en hoe je te beschermen tegen deze praktijken. De bedoeling is dat je na het lezen van deze proef weet wat VOIP is met alle voor en nadelen. Hoe het veilig en onveilig is en hoe je te beschermen tegen inbreuken. Deze proef sluit aan bij mijn stage bij SmartTelecom NV. Hier implementeer en beheer VOIP in nieuwe en bestaande netwerken bij klanten. Op deze manier kom ik dagelijks in contact met de voor en nadelen van VOIP. Alsook met de gevaren ervan en hoe te beveiligen tegen deze gevaren. Research via deze stage is dan ook mijn voornaamste aanpak van de probleemstelling.
+ 
 \end{abstract}
 
 \chapter*{Voorwoord}
 \label{ch:voorwoord}
-
+Deze thesis is in het kader van mijn bachlorproef voor toegepaste informatica aan de hogeschool Gent.\\
+Ik wil mijn stagementor en copromotor Krist Vanneste van SmartTelecom NV bedanken voor de hulp en research mogelijk door hem.\\
+Ook bedank ik mijn stage partner Dries Vandooren voor de nuttige invloed tijdens de stage en in het onderwerp VOIP.
 % TODO: Vergeet ook niet te bedankten wie je geholpen/gesteund/... heeft
-\lipsum[5-6]
+]
 
 \tableofcontents
 
@@ -199,12 +203,40 @@
 \chapter{Inleiding}
 \label{ch:inleiding}
 
-De inleiding moet de lezer alle nodige informatie verschaffen om het onderwerp te begrijpen zonder nog externe werken te moeten raadplegen \citep{Pollefliet2011}. Dit is een doorlopende tekst die gebaseerd is op al wat je over het onderwerp gelezen hebt (literatuuronderzoek).
+Wat is VOIP? VOIP of Voice Over IP(Internet Protocol) is de technologie waar je telefonie en multimedia sessies(conference call met beeld) gaat sturen over een IP netwerk. Men verwijst vaak naar VOIP als internet telefonie. Hierbij ga je je communicatie(stem, sms, fax, … ) sturen over het internet in tegenstelling tot bij traditionele telefonie waarbij dit via een public telefonie netwerk gebeurde. In tegenstelling tot wat de naam zegt is internet verbinding niet altijd nodig bij VOIP. VOIP betekend eenvoudig dat je je communicatie gaat versturen via dezelfde protocollen als degene het internet gebruikt. Zo kan je binnen een groot bedrijf elke werknemer voorzien van VOIP telefoons en deze kunnen elkaar bellen via VOIP zonder dat ze verbinding maken met het internet. Eens ze willen bellen naar locaties buiten hun netwerk dan komt er uiteraard internet aan te pas.\\ \\
+Maar we lopen vooruit op de feiten. We starten met telefonie waar het allemaal bij startte. De eerste telefoons. De eerste telefoonlijn was een directe lijn tussen 2 toestellen. Eens er meer en meer toestellen kwamen maakte men gebruik van POTS wat staat voor “Plain Old Telephone Service”. Vertaalt is dit “de eenvoudig oude telefoon service”. POTS ging over een netwerk genaamd PSTN(“public switched telephone network” of ” publiek verdeeld telefoon netwerk”). Bij directe verbindingen tussen toestellen was er sprake van een analoog signaal tussen de 2. De stem werd op deze manier overgebracht. POTS en PSTN werden mogelijk toen de ontdekking werd gemaakt dat men dit analoog signaal kon omvormen naar een digitaal signaal. Een stem die in origine analoog was kon worden omgevormd naar een digitaal signaal en kon worden verstuurd als nullen en eentjes. Een betere technologie was ontwikkeld en de basis voor wat later zou uitgroeien tot VOIP was gelegd. \\ \\
+Tot op dat moment werd er gekozen om de telefonie gescheiden te houden van het opkomende computernetwerk. In computernetwerken werd er gewerkt met pakketten. Om VOIP gebruik te laten maken van deze netwerkten zou het ook zo gaan werken. VOIP gaat de geluidssignalen opsplitsen in pakketten en deze versturen over het netwerk. Deze pakketten bevatten behalve het geluid signaal ook het netwerk adres van de beller en ontvanger. En door het gebruik van pakketten werd het mogelijk om meer informatie mee te sturen om de communicatie te ondersteunen en verbeteren. \\ \\
+Waar POTS specifieke benodigdheden had is VOIP enorm veelzijdig. Het werkt op verscheidene soorten netwerken. En het werkt niet alleen met VOIP telefoons maar ook met computers, Pda’s en zelf smartphones. Deze toestellen bevatten allemaal een NIC( Network Interface Card) net zoals een computer. Via deze NIC’s krijgen de toestellen dan een netwerk adres(IP-adres). Op deze manier zijn VOIP toestellen deel van je computer netwerk. \\ \\
+Wat zijn nu de voor en nadelen van POTS en VOIP.\\
 
-Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz. naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${cite\{\}}} of \texttt{$\backslash${citep\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\TeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin, gebruik je \texttt{$\backslash${}cite\{\}}.
-Soms wil je de auteur niet expliciet vernoemen, dan gebruik je \texttt{$\backslash${}citep\{\}}. Hieronder een voorbeeld van elk.
+POTS: \\
+\begin{itemize}
+	\item voordelen
+	\begin{itemize}
+		\item Het is in vele gevallen al aanwezig.
+	\end{itemize}
+	\item nadelen
+	\begin{itemize}
+		\item Het aantal main telefoonlijnen is het aantal oproepen je bedrijf tegelijk aankan. 
+		\item Het aantal extenties je kan hebben is bepaald door je PBX( private branch exchange)
+		\item Het werkt enkel met analoge telefoons. Geen pc's, smartphones, \ldots
+	\end{itemize}
+\end{itemize} 
+VOIP: \\
+\begin{itemize}
+	\item voordelen
+	\begin{itemize}
+		\item Ongelimiteerd aantal oproepen dat je tegelijk kan afhandelen(als je internet snel genoeg is)
+		\item Ongelimiteerd aantal extenties.
+		\item Bied meer aan dan enkel telefonie zoals Video calls,bellen vanop PC's, \ldots
+		\item Geen gescheiden netwerk voor telefonie(geen dubbele bekabeling)
+	\end{itemize}
+	\item nadelen
+	\begin{itemize}
+		\item Er is een investeringskost bij aankoop van toestellen en PBX
+	\end{itemize}
+\end{itemize} 
 
-\cite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\citep{Creeger2009}.
 
 \section{Probleemstelling en Onderzoeksvragen}
 \label{sec:onderzoeksvragen}
@@ -212,7 +244,6 @@ Soms wil je de auteur niet expliciet vernoemen, dan gebruik je \texttt{$\backsla
 % TODO: Wees zo concreet mogelijk bij het formuleren van je
 % onderzoeksvra(a)g(en). Een onderzoeksvraag is trouwens iets waar nog
 % niemand op dit moment een antwoord heeft (voor zover je kan nagaan).
-\lipsum[7-20]
 
 \chapter{Methodologie}
 \label{ch:methodologie}
@@ -222,14 +253,13 @@ Soms wil je de auteur niet expliciet vernoemen, dan gebruik je \texttt{$\backsla
 % op deze manier te werk gegaan bent. Je moet kunnen aantonen dat je de best
 % mogelijke manier toegepast hebt om een antwoord te vinden op de
 % onderzoeksvraag.
-\lipsum[21-25]
+
 
 \chapter{Corpus}
 \label{ch:corpus}
 
 %% TODO: de structuur en titel van deze hoofdstukken hangen af van je
 % eigen onderzoek. Elke fase in je onderzoek kan een eigen hoofdstuk krijgen. Kies telkens een gepaste titel. ``Corpus'' is *GEEN* gepaste titel
-\lipsum[26-75]
 
 \chapter{Conclusie}
 \label{ch:conclusie}
@@ -238,7 +268,7 @@ Soms wil je de auteur niet expliciet vernoemen, dan gebruik je \texttt{$\backsla
 % onderzoeksvra(a)g(en). Reflecteer kritisch over het resultaat. Zijn er
 % zaken die nog niet duidelijk zijn? Heeft het ondezoek geleid tot nieuwe
 % vragen die uitnodigen tot verder onderzoek?
-\lipsum[76-80]
+
 
 
 \bibliographystyle{apa}
