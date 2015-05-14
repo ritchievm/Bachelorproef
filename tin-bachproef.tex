@@ -191,7 +191,6 @@ Deze thesis is in het kader van mijn bachlorproef voor toegepaste informatica aa
 Ik wil mijn stagementor en copromotor Krist Vanneste van SmartTelecom NV bedanken voor de hulp en research mogelijk door hem.\\
 Ook bedank ik mijn stage partner Dries Vandooren voor de nuttige invloed tijdens de stage en in het onderwerp VOIP.
 % TODO: Vergeet ook niet te bedankten wie je geholpen/gesteund/... heeft
-]
 
 \tableofcontents
 
@@ -258,26 +257,29 @@ VOIP is een nieuwe technologie, en een nieuwe technologie toevoegen aan je netwe
 \end{itemize}
 
 \subsection{Samenwerking met andere Technologieën}
-test test
+
+	\paragraph Kan VOIP ervoor zorgen dat de werking van je netwerk in het gedrang komt? Dan denk ik niet aan inbreuken via de VOIP maar eerder of de benodigdheden voor VOIP en de netwerklast die dit veroorzaakt problemen geeft voor de andere zaken die gebruik maken van het netwerk.
+
 \subsection{Beveiligingsdreigingen}
 Hier ga ik opsommen wat de voornaamste dreigingen zijn op het gebied van beveiliging van VOIP systemen.
 
-	\paragraph Met behulp van packet sniffing software kan je de packetten van VOIP bekijken. Dit geeft je informatie over welk nummer op welk IP-address belt naar welk nummer. Deze informatie kan misbruikt worden. Door middel van bijvoorbeeld VOMIT,voice over misconfigured internet telephones, kan je de datastream van VOIP gesprekken omzetten naar een beluisterbaar formaat. Op deze manier kan je gesprek letterlijk worden afgeluisterd. Alle gevoelige informatie is dan dus niet meer veilig.
+	\paragraph Met behulp van packet sniffing software kan je de packetten van VOIP bekijken. Dit geeft je informatie over welk nummer op welk IP-address belt naar welk nummer. Deze informatie kan misbruikt worden. Door middel van bijvoorbeeld VOMIT,voice over misconfigured internet telephones, kan je de datastream van VOIP gesprekken omzetten naar een beluisterbaar formaat. 			Op deze manier kan je gesprek letterlijk worden afgeluisterd. Alle gevoelige informatie is dan dus niet meer veilig.
 
-\paragraph Zoals vroeger met traditionele telefonie is er bij VOIP ook altijd belang naar het verkrijgen van gratis telefonie. Men noemt dit phreaking. Hierbij gaat een fout individu trachten toegang te krijgen tot je VOIP netwerk. Op deze manier gaat deze persoon dan kunnen bellen op kosten van de eigenaar. Hij gaat dit trachten te doen door de authenticatiegegevens van een VOIP gebruikter te verkrijgen.
+	\paragraph Zoals vroeger met traditionele telefonie is er bij VOIP ook altijd belang naar het verkrijgen van gratis telefonie. Men noemt dit phreaking. Hierbij gaat een fout individu trachten toegang te krijgen tot je VOIP netwerk. Op deze manier gaat deze persoon dan kunnen bellen op kosten van de eigenaar. Hij gaat dit trachten te doen door de authenticatiegegevens van een VOIP 			gebruikter te verkrijgen.
 
-\paragraph Indien je je netwerk veiliger maakte met de implementatie van een aparte vlan voor je VOIP telefonie is er de kans dat een individu gaat trachten toegang te krijgen tot je telefonie vlan door middel van VLAN hopping. 
+	\paragraph Indien je je netwerk veiliger maakte met de implementatie van een aparte vlan voor je VOIP telefonie is er de kans dat een individu gaat trachten toegang te krijgen tot je telefonie vlan door middel van VLAN hopping. 
 
-\paragraph Er zou iemand kunnen proberen om de gesprekken te verstoren. Dit is mogelijk door geluid pakketen te injecteren in de communicatie stream. Op deze manier kan de kwaliteit van een gesprek enorm verminderen, de twee sprekers kunnen zelf voor langere periodes stilte horen.
+	\paragraph Er zou iemand kunnen proberen om de gesprekken te verstoren. Dit is mogelijk door geluid pakketen te injecteren in de communicatie stream. Op deze manier kan de kwaliteit van een gesprek enorm verminderen, de twee sprekers kunnen zelf voor langere periodes stilte horen.
 
-\paragraph VOIP telefoons zijn zoals computers ook toestellen op je netwerk. Dit laat hen kwetsbaar voor een DOS aanval. Op deze manier kan iemand de telefoon spammen met onnodig veel SIP calls. Hierdoor wordt het toestel overbelast en kan het niet meer bellen of gebelt worden.
+	\paragraph VOIP telefoons zijn zoals computers ook toestellen op je netwerk. Dit laat hen kwetsbaar voor een DOS aanval. Op deze manier kan iemand de telefoon spammen met onnodig veel SIP calls. Hierdoor wordt het toestel overbelast en kan het niet meer bellen of gebelt worden.
 
-\paragraph Waar traditionele telefoons een nummer hebben hebben VOIP telefoons een IP address. Traditionele telefoons krijgen soms reclame oproepen. Bij VOIP oproepen is het mogelijk om via scripts naar enorme hoeveelheden IP addressen reclame boodschappen te sturen. Degene toe terecht  komen bij toestellen zouden voor de zender voordelig zijn maar niet voor de eigenaar van dat toestel. Deze manier van reclame spamming noemt SPIT(Spamming over Internet Telephony).
+	\paragraph Waar traditionele telefoons een nummer hebben hebben VOIP telefoons een IP address. Traditionele telefoons krijgen soms reclame oproepen. Bij VOIP oproepen is het mogelijk om via scripts naar enorme hoeveelheden IP addressen reclame boodschappen te sturen. Degene toe terecht  komen bij toestellen zouden voor de zender voordelig zijn maar niet voor de eigenaar 			van dat toestel. Deze manier van reclame spamming noemt SPIT(Spamming over Internet Telephony).
 
  
 \subsection{VOIP met IPV6}
-test test
-
+	
+	\paragraph Nu het duidelijk is dat we op het internet met een enorm tekort zitten aan publieke IP adressen is het dan ook geen verrassing dat er een nieuw internet protocol aankomt. Dit nieuwe protocol komt in de vorm van IPv6(Internet Protocol Versie 6). Elke overstap naar een nieuw protocol, van welke aard dan ook, brengt veranderingen met zich mee. Het zorgt voor vernieuwing 		maar het zorgt er ook voor dat je als gebruiker je netwerkinfrastructuur moet aanpassen zodat het met dit nieuwe protocol kan werken. \\
+	Het is dan ook logisch dat we ons moeten afvragen wat de impact zal zijn van IPv6 op ons netwerk. En in het bijzonder de invloed op VOIP binnen ons netwerk? In dit deel zal ik onderzoeken wat de voordelen zijn voor VOIP en hoe we ons zullen moeten aanpassen om VOIP te laten werken met IPv6.
 
 % TODO: Wees zo concreet mogelijk bij het formuleren van je
 % onderzoeksvra(a)g(en). Een onderzoeksvraag is trouwens iets waar nog
@@ -285,6 +287,24 @@ test test
 
 \chapter{Methodologie}
 \label{ch:methodologie}
+
+\subsection Research naar VOIP
+
+\paragraph Voor ik startte met mijn stage en mijn bachelor proef, was mijn kennis over VOIP vrij miniem. Ik wist in grote lijnen wat het deed maar niet zozeer hoe het dat deed. Mijn eerste stap naar het oplossen van mijn vragen was eenvoudig. Mijn stage is bij het bedrijf SmartTelecom NV. Dit bedrijf is een provider van VOIP systemen. Door mee te lopen met mijn stagementor Krist Vanneste kreeg ik als het ware een spoedcursus over VOIP. De eerste weken leerde ik hoe VOIP werkte en waar je op moest letten. Het is op dit moment dat ik mijn eerste vraag kon beantwoorden. 
+
+\subsubsection In theorie zorgt VOIP voor geen problemen voor andere technologieën en zaken die van het netwerk gebruiken. In de praktijk zie je dat niet elk netwerk geschikt is om VOIP te implementeren. \\
+Zoals vele technologieën verlangt VOIP dat het netwerk sterk en krachtig genoeg is. Op een piekmoment van telefonie, kan VOIP veel vergen van de bandwith van je netwerk. Hier wordt het dus direct duidelijk dat zwakke en zeer eenvoudige netwerken problemen kunnen hebben met de benodigdheden van VOIP. \\
+Als we een netwerk gaan analyseren kijken we naar het volgende.
+
+\begin{itemize}
+	\item Latency: Dit is de tijdsvertraging die optreed tussen de verzender en ontvanger. Bij VOIP mag dit maximum 150ms zijn. Meer zou ervoor zorgen dat het gesprek wegvalt.
+	\item Jitter: Dit is vertraging die veroorzaakt wordt door queue's, datacongestie, routeveranderingen of serialisatie. Vanaf 40ms gaat de kwaliteit van het gesprek bij VOIP achteruit.
+	\item Packetloss: Soms komen bepaalde pakketten niet aan op hun bestemming. Dan spreken we van Packet Loss. Voor VOIP kan je  maximum 1% verlies toestaan bij WAN en slechts 0.05% bij LAN.
+\end{itemize}
+Als een van deze waarden hun grens overschrijdt dan zal de kwaliteit van het gesprek enorm achteruitgaan. Er moet dus gezorgd worden dat het netwerk snel genoeg is en dat het goed is opgebouwd. Zodat het VOIP aankan. \\
+Vervolgens wordt duidelijk hoe VOIP andere technologieën kan tegenwerken. Als je in je netwerk gebruikmaakt van zaken die zelf ook veel bandwith gebruiken. Dan kan een veeleisend VOIP met deze technologieën gaan vechten. Op deze manier leiden beide hieronder en gaan de werking van beiden achteruit. 
+
+
 
 % TODO: Hoe ben je te werk gegaan? Verdeel je onderzoek in grote fasen, en
 % licht in elke fase toe welke stappen je gevolgd hebt. Verantwoord waarom je
