@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.8)  14 MAY 2015 15:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.4.8)  17 MAY 2015 17:56
 entering extended mode
 **E:/Data/Users/Ritchie-Vast/Documents/School/Bachelorproef/tin-bachproef.tex
 (E:/Data/Users/Ritchie-Vast/Documents/School/Bachelorproef/tin-bachproef.tex
@@ -903,7 +903,7 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 128.
 (E:\Programs\MiKTeX\tex\latex\lm\t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<img/HG-beeldmerk-woordmerk.png, id=35, 557.2017pt x 611.4042pt>
+<img/HG-beeldmerk-woordmerk.png, id=67, 557.2017pt x 611.4042pt>
 File: img/HG-beeldmerk-woordmerk.png Graphic file (type png)
 
 <use img/HG-beeldmerk-woordmerk.png>
@@ -967,7 +967,7 @@ l.186 \end{abstract}
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.196 \tableofcontents
+l.195 \tableofcontents
                        [2
 
 ]
@@ -1014,34 +1014,34 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 Hoofdstuk 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--211
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--211
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--211
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--211
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--211
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
 
  []
 
 [4
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+lmss on input line 214
+LaTeX Font Info:    Try loading font information for TS1+lmss on input line 213
 .
  (E:\Programs\MiKTeX\tex\latex\lm\ts1lmss.fd
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1062,42 +1062,59 @@ Hoofdstuk 3.
 
 ]
 Hoofdstuk 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--336
+
+ []
+
+
+Underfull \vbox (badness 1596) has occurred while \output is active []
+
+ [11
+
+]
+[12]
+Hoofdstuk 5.
+[13
+
+]
+Hoofdstuk 6.
 (E:\Data\Users\Ritchie-Vast\Documents\School\Bachelorproef\tin-bachproef.bbl
-[11
+[14
 
 ]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 6.
-) [12
+) [15
 
 ]
 (E:\Data\Users\Ritchie-Vast\Documents\School\Bachelorproef\tin-bachproef.lof)
 \tf@lof=\write5
 
-[13
+[16
 
 ]
 (E:\Data\Users\Ritchie-Vast\Documents\School\Bachelorproef\tin-bachproef.lot)
 \tf@lot=\write6
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 323.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 372.
 
-[14
+[17
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 323.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 372.
 
 (E:\Data\Users\Ritchie-Vast\Documents\School\Bachelorproef\tin-bachproef.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 323.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 323.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 372.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 372.
 Package rerunfilecheck Info: File `tin-bachproef.out' has not changed.
-(rerunfilecheck)             Checksum: 0A55571105E3D9B8C509B18727FDA4A5;500.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 323.
+(rerunfilecheck)             Checksum: 47981AE41C97AC38EAD5527627CBC0A6;1007.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 372.
  ) 
 Here is how much of TeX's memory you used:
- 9856 strings out of 493921
- 137055 string characters out of 3150871
- 314242 words of memory out of 3000000
- 12933 multiletter control sequences out of 15000+200000
+ 9882 strings out of 493921
+ 137391 string characters out of 3150871
+ 314361 words of memory out of 3000000
+ 12943 multiletter control sequences out of 15000+200000
  45373 words of font info for 43 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,11n,43p,1224b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1105,9 +1122,9 @@ Here is how much of TeX's memory you used:
 nc/dvips/lm/lm-ec.enc}<E:/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><E:/P
 rograms/MiKTeX/fonts/type1/public/lm/lmss12.pfb><E:/Programs/MiKTeX/fonts/type1
 /public/lm/lmssbx10.pfb><E:/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb>
-Output written on tin-bachproef.pdf (17 pages, 205019 bytes).
+Output written on tin-bachproef.pdf (20 pages, 219326 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
- 70 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 225 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
+ 134 words of extra memory for PDF output out of 10000 (max. 10000000)
 
