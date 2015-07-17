@@ -39,6 +39,8 @@
 
 \usepackage{lipsum}          % Voor vultekst (lorem ipsum)
 
+\usepackage{wrapfig}
+
 %%---------- Layout ------------------------------------------------------
 
 % hoofdingen, enz.
@@ -243,6 +245,29 @@ Dit is niet de eenige mogelijkheid. Je kan er ook voor kiezen om je PBX te laten
 Maar met een PBX centrale die zich op het internet bij een bedrijf die de diensten van hun PBX aanbied. Op deze manier kan je als bedrijf kosten sparen door de aankoop van een eigen PBX systeem te vervangen door een maandelijkse hosting kost.
 De voordelen van een hosted VOIP zijn dat je geen grote aankoopkost hebt, alsook dat je geen onderhoudskosten hebt. Ook kan je hierbij je VOIP telefoon toestellen plaatsen waar je wil. Je kan je toestel na het werk meenemen naar huis en daar berijkbaar zijn op het nummer van op werk.
 Bij een beheren van je eigen PBX is er een investering in materiaal, maar dit geeft je de mogelijkheid je VOIP netwerk te beheren zoals jij dat wil. In theorie zou je verbindingen kunnen open stellen waarbij je je toestel ook zou kunnen thuis zetten. Dit wordt wel afgeraden omdat dit je netwerk midner veilig maakt. Meer informatie later in deze thesis.
+\\
+Als we naar al deze voor en nadelen kijken en we zien alle extra's dat VOIP aanbied, dan is alles positief. Nu is de vraag of en hoe VOIP dit allemaal kan. Om te begrijpen hoe VOIP werkt gaan we kijken naar een model dat al lang word gebruikt op het internet namelijk het TCP/IP model. Het TCP/IP model is een aangepaste variant van het OSI model.
+TCP/IP is een groep van netwerk protocollen. En een protocol is een regel die bepaald verkeer over een netwerk gaat regelen. Je hebt protocollen voor gewoon dataverkeer en je hebt er die strikt dienen voor VOIP. Elk van die protocollen komt overeen met een laag van het TCP/IP model. Ik ga de verschillende lagen niet beschrijven tenzij het nodig is om alles te begrijpen.
+Een pakket zal van start tot einde van zijn tocht elke laag 2 maal doorlopen. Eenmaal bij het verzenden en eenmaal bij het ontvangen. Waar een normaal pakket vertrekt bij de verzendende pc en aankomt bij de ontvangende computer. Vertrekt een VOIP pakket bij de beller en komt aan bij de gebelde.
+Het Pakket vertrekt bij de applicatielaag en elke laag dat het doorloopt krijgt het meer informatie en veranderd het van formaat. Eens het bij de onderste laag komt(Netwerk interface) dan wordt het verstuurd over het netwerk. Eens aangekomen bij de applicatielaag van de gebelde, wordt het omgezet naar een hoorbaar formaat.
+\\
+Natuurlijk zijn er verschillen tussen het normale dataverkeer en VOIP verkeer. In de bovenste laag(Applicatie laag) maakt VOIP gebruik van 3 protocollen:
+
+\begin{itemize}
+	\item NTP: Network Time protocol: Dit gaat de timing verzorgen bij het verzenden van de pakketen zodat alles gebeurd in de juiste volgorde en op die manier de kwaliteit te garanderen.
+	\item RTP: Real-time Transport Protocol: Gaat end-to-end netwerk transport functionaliteiten toevoegen.
+	\item RTCP: Real-time Transport Control Protocol: Dit gaat het geluids signaal controleren op aflevering en controle functies toevoegen.
+\end{itemize}
+
+Ook in de transport laag is er een verschil. Waar traditionele datapakketten gebruik maken van TCP, gaat VOIP net zoals Videoconferencing gebruik maken van UDP(user datagram protocol). TCP is een trager protocol dan UDP, dit is omdat TCP meer controleerd op ontvangst van pakketten. UDP is sneller omdat het dit niet doet. 
+Als er bij normaal dataverkeer een aantal pakketten niet aankomt dan is er een probleem. Dan zijn er documenten of gegevens niet volledig. Bij VOIP mag er al eens een pakket wegvallen. Zelf al wou je het pakket opnieuw verzenden dan nog kan je dat niet. Gesproken taal is sequentieel en je kan dus een deel van het begin niet op het einde erbij plakken.
+Daarom is er dus gekozen voor UDP.
+
+\begin{figure}[h]
+\caption{Het OSI model naast het TCP/IP model.}
+\includegraphics[scale=0.8]{img/TCP}
+\end{figure}
+
 
 \newpage
 
