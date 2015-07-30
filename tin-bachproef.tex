@@ -261,7 +261,9 @@ Natuurlijk zijn er verschillen tussen het normale dataverkeer en VOIP verkeer. I
 
 Ook in de transport laag is er een verschil. Waar traditionele datapakketten gebruik maken van TCP, gaat VOIP net zoals Videoconferencing gebruik maken van UDP(user datagram protocol). TCP is een trager protocol dan UDP, dit is omdat TCP meer controleerd op ontvangst van pakketten. UDP is sneller omdat het dit niet doet. 
 Als er bij normaal dataverkeer een aantal pakketten niet aankomt dan is er een probleem. Dan zijn er documenten of gegevens niet volledig. Bij VOIP mag er al eens een pakket wegvallen. Zelf al wou je het pakket opnieuw verzenden dan nog kan je dat niet. Gesproken taal is sequentieel en je kan dus een deel van het begin niet op het einde erbij plakken.
-Daarom is er dus gekozen voor UDP.
+Daarom is er dus gekozen voor UDP. 
+
+
 
 \begin{figure}[h]
 \caption{Het OSI model naast het TCP/IP model.}
@@ -273,7 +275,9 @@ Daarom is er dus gekozen voor UDP.
 
 \section{Probleemstelling en Onderzoeksvragen}
 \label{sec:onderzoeksvragen}
-VOIP is een nieuwe technologie, en een nieuwe technologie toevoegen aan je netwerk levert mogelijk problemen op. Je kan problemen hebben in samenwerking met andere gebruikte technologieën of je kan beveiligingsproblemen hebben. De probleemstelling is dan ook duidelijk. Wat is de impact van de implementatie van VOIP op een netwerk? Ook is er de opkomente IPV6 technologie. Hoe gaat VOIP samenwerken hiermee.
+VOIP is een nieuwe technologie, en een nieuwe technologie toevoegen aan je netwerk levert mogelijk problemen op. 
+Zoals eerder vermeld gebruikt VOIP het zelfde netwerk als je standaard netwerk data verkeer. Dit betekend dat alle beveiligingsrisico's en dreigingen dat gewoon verkeer heeft, dat deze ook dreigingen zijn voor VOIP. VOIP heeft, in tegendeel tot dataverkeer, nog geen echte standaard. Ook moet er bij VOIP rekening gehouden worden met QOS(quality of service). Een super veilig systeem met slechte kwaliteit van gesprekken is geen goed systeem. Er moet dus een middenweg gevonden worden om het systeem zo veilig mogelijk te maken zonder in te boeten aan QOS.
+Nu ga ik dit alles opsplitsen in 3 categorieën.
 
 \begin{itemize}
 	\item Zijn er problemen in samenwerking met andere technologieën?
@@ -332,14 +336,14 @@ Hier ga ik opsommen wat de voornaamste dreigingen zijn op het gebied van beveili
 \chapter{Samenwerking met andere Technologieën}
 \label{ch:Samenwerking met andere Technologieën}
 
-\paragraph In theorie zorgt VOIP voor geen problemen voor andere technologieën en zaken die van het netwerk gebruiken. In de praktijk zie je dat niet elk netwerk geschikt is om VOIP te implementeren. \\
+\paragraph In theorie zorgt VOIP voor geen problemen met andere technologieën en zaken die van het netwerk gebruik maken. In de praktijk zie je dat niet elk netwerk geschikt is om VOIP te implementeren. \\
 Zoals vele technologieën verlangt VOIP dat het netwerk sterk en krachtig genoeg is. Op een piekmoment van telefonie, kan VOIP veel vergen van de bandwith van je netwerk. Hier wordt het dus direct duidelijk dat zwakke en zeer eenvoudige netwerken problemen kunnen hebben met de benodigdheden van VOIP. \\
 Als we een netwerk gaan analyseren kijken we naar het volgende.
 
 \begin{itemize}
-	\item Latency: Dit is de tijdsvertraging die optreed tussen de verzender en ontvanger. Bij VOIP mag dit maximum 150ms zijn. Meer zou ervoor zorgen dat het gesprek wegvalt.
-	\item Jitter: Dit is vertraging die veroorzaakt wordt door queue's, datacongestie, routeveranderingen of serialisatie. Vanaf 40ms gaat de kwaliteit van het gesprek bij VOIP achteruit.
-	\item Packetloss: Soms komen bepaalde pakketten niet aan op hun bestemming. Dan spreken we van Packet Loss. Voor VOIP kan je  maximum 1% verlies toestaan bij WAN en slechts 0.05% bij LAN.
+	\item Latency: Dit is de tijdsvertraging die optreed tussen de verzender en ontvanger. Bij VOIP mag dit maximum 150ms zijn. Meer zou ervoor zorgen dat het gesprek wegvalt. Latency kan worden veroorzaakt door elk netwerk apparaat waar pakketten door gestuurd worden. En als een apparaat druk belast wordt dan kan dit zorgen voor vertraging.
+	\item Jitter: Jitter is de variatie in Latency die kan voorkomen in een netwerk. De latency is niet constant het zelfde. Jitter is dus een soort van standaard afwijking. Bij VOIP blijft de jitter best onder 50ms. Vanaf hogere waarden is er een grote impact op de QOS.
+	\item Packetloss: Soms komen bepaalde pakketten niet aan op hun bestemming. Dan spreken we van Packet Loss. Voor VOIP kan je  maximum 1\% verlies toestaan bij WAN en slechts 0.05\% bij LAN. Packet loss zorgt ondermeer voor een hogere Jitter, wat dan weer voor slechte QOS zorgt. 
 \end{itemize}
 Als een van deze waarden hun grens overschrijdt dan zal de kwaliteit van het gesprek enorm achteruitgaan. Er moet dus gezorgd worden dat het netwerk snel genoeg is en dat het goed is opgebouwd. Zodat het VOIP aankan. \\
 Vervolgens wordt duidelijk hoe VOIP andere technologieën kan tegenwerken. Als je in je netwerk gebruikmaakt van zaken die zelf ook veel bandwidth gebruiken. Dan kan een veeleisend VOIP met deze technologieën gaan vechten. Op deze manier leiden beide hieronder en gaan de werking van beiden achteruit. 
