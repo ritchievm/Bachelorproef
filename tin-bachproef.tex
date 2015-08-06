@@ -40,6 +40,7 @@
 \usepackage{lipsum}          % Voor vultekst (lorem ipsum)
 
 \usepackage{wrapfig}
+\usepackage{float}
 
 %%---------- Layout ------------------------------------------------------
 
@@ -287,10 +288,10 @@ Nu ga ik dit alles opsplitsen in 3 categorieën.
 
 \subsection{Samenwerking met andere Technologieën}
 
-	\paragraph Kan VOIP ervoor zorgen dat de werking van je netwerk in het gedrang komt? Dan denk ik niet aan inbreuken via de VOIP maar eerder of de benodigdheden voor VOIP en de netwerklast die dit veroorzaakt problemen geeft voor de andere zaken die gebruik maken van het netwerk.
+	\paragraph Kan VOIP ervoor zorgen dat de werking van je netwerk in het gedrang komt? Dan denk ik niet aan inbreuken via de VOIP maar eerder of de benodigdheden voor VOIP en de netwerklast die dit veroorzaakt problemen geeft voor de andere zaken die gebruik maken van het netwerk. Uiteraard is er ook de mogelijke last voor VOIP als het zich op een netwerk bevind met een reeds bestaande hoge netwerklast. Hoe zal VOIP werken in zo'n omgeving.
 
 \subsection{Beveiligingsdreigingen}
-Hier ga ik opsommen wat de voornaamste dreigingen zijn op het gebied van beveiliging van VOIP systemen.
+Hier ga ik opsommen wat de voornaamste dreigingen zijn op het gebied van beveiliging van VOIP systemen. Je hebt dreigingen gericht naar het verkrijgen van informatie, het voordoen als iemand anders en het verstoren van gesprekken. 
 
 	\paragraph Met behulp van packet sniffing software kan je de packetten van VOIP bekijken. Dit geeft je informatie over welk nummer op welk IP-address belt naar welk nummer. Deze informatie kan misbruikt worden. Door middel van bijvoorbeeld VOMIT,voice over misconfigured internet telephones, kan je de datastream van VOIP gesprekken omzetten naar een beluisterbaar formaat. 			Op deze manier kan je gesprek letterlijk worden afgeluisterd. Alle gevoelige informatie is dan dus niet meer veilig.
 
@@ -318,7 +319,7 @@ Hier ga ik opsommen wat de voornaamste dreigingen zijn op het gebied van beveili
 \label{ch:methodologie}
 
 
-\paragraph Voor ik startte met mijn stage en mijn bachelor proef, was mijn kennis over VOIP vrij miniem. Ik wist in grote lijnen wat het deed maar niet zozeer hoe het dat deed. Mijn eerste stap naar het oplossen van mijn vragen was eenvoudig. Mijn stage is bij het bedrijf SmartTelecom NV. Dit bedrijf is een provider van VOIP systemen. Door mee te lopen met mijn stagementor Krist Vanneste kreeg ik als het ware een spoedcursus over VOIP. De eerste weken leerde ik hoe VOIP werkte en waar je op moest letten. Ik hielp met het implementeren van VOIP in zowel bestaande als nieuwe netwerken. Op deze manier kwam ik veel te weten over de praktijk van de zaak. Bijvoorbeeld dat bestaande netwerken soms niet optimaal zijn opgebouwd. Deze werken dan wel voor de basis toepassingen maar eens je er VOIP bij implementeerd zijn er problemen. 
+\paragraph Voor ik startte met mijn stage en mijn bachelor proef, was mijn kennis over VOIP vrij miniem. Ik wist in grote lijnen wat het deed maar niet zozeer hoe het dat deed. Mijn eerste stap naar het oplossen van mijn vragen was eenvoudig. Mijn stageliep ik aan het bedrijf SmartTelecom NV. Dit bedrijf is een provider van onder andere VOIP systemen. Door mee te lopen met mijn stagementor Krist Vanneste kreeg ik als het ware een spoedcursus over VOIP. De eerste weken leerde ik hoe VOIP werkte en waar je op moest letten. We startte bij aan de basis met telefoons en werkten stap voor stap op naar centrales en hele netwerken. Ik hielp onder andere met het implementeren van VOIP in zowel bestaande als nieuwe netwerken. Op deze manier kwam ik veel te weten over de praktijk van de zaak.een voorbeeld hiervan is dat bestaande netwerken soms niet optimaal zijn opgebouwd. Deze werken dan wel voor de basis toepassingen maar eens je er VOIP bij implementeerd zijn er problemen. 
 
 \paragraph De tweede fase van mijn onderzoek was mijn bevindingen te gaan staven. Ik had ideeën over hoe VOIP in elkaar zit en waar je op moet letten bij het implementeren. Maar alvorens ik mijn bachelorproef kon beginnen schrijven moest ik uiteraard zorgen dat deze kennis correct was. Ik ben daarvoor aan het opzoeken geslaan. Ik ben beginnen opzoeken hoe VOIP werkt en wat experts zeggen dat de aandachtspunten zijn bij het opzetten van VOIP. Ik was dan ook zeer tevreden wanneer ik dit las en doorhad dat dit perfect aansloot met mijn eigen reeds vergaarde kennis.
 
@@ -336,7 +337,7 @@ Hier ga ik opsommen wat de voornaamste dreigingen zijn op het gebied van beveili
 \chapter{Samenwerking met andere Technologieën}
 \label{ch:Samenwerking met andere Technologieën}
 
-\paragraph In theorie zorgt VOIP voor geen problemen met andere technologieën en zaken die van het netwerk gebruik maken. In de praktijk zie je dat niet elk netwerk geschikt is om VOIP te implementeren. \\
+\paragraph In theorie zorgt VOIP voor geen problemen met andere technologieën en zaken die van het netwerk gebruik maken. In de praktijk zie je dat niet elk netwerk geschikt is om VOIP te implementeren.
 Zoals vele technologieën verlangt VOIP dat het netwerk sterk en krachtig genoeg is. Op een piekmoment van telefonie, kan VOIP veel vergen van de bandwith van je netwerk. Hier wordt het dus direct duidelijk dat zwakke en zeer eenvoudige netwerken problemen kunnen hebben met de benodigdheden van VOIP. \\
 Als we een netwerk gaan analyseren kijken we naar het volgende.
 
@@ -345,8 +346,10 @@ Als we een netwerk gaan analyseren kijken we naar het volgende.
 	\item Jitter: Jitter is de variatie in Latency die kan voorkomen in een netwerk. De latency is niet constant het zelfde. Jitter is dus een soort van standaard afwijking. Bij VOIP blijft de jitter best onder 50ms. Vanaf hogere waarden is er een grote impact op de QOS.
 	\item Packetloss: Soms komen bepaalde pakketten niet aan op hun bestemming. Dan spreken we van Packet Loss. Voor VOIP kan je  maximum 1\% verlies toestaan bij WAN en slechts 0.05\% bij LAN. Packet loss zorgt ondermeer voor een hogere Jitter, wat dan weer voor slechte QOS zorgt. 
 \end{itemize}
-Als een van deze waarden hun grens overschrijdt dan zal de kwaliteit van het gesprek enorm achteruitgaan. Er moet dus gezorgd worden dat het netwerk snel genoeg is en dat het goed is opgebouwd. Zodat het VOIP aankan. \\
-Vervolgens wordt duidelijk hoe VOIP andere technologieën kan tegenwerken. Als je in je netwerk gebruikmaakt van zaken die zelf ook veel bandwidth gebruiken. Dan kan een veeleisend VOIP met deze technologieën gaan vechten. Op deze manier leiden beide hieronder en gaan de werking van beiden achteruit. 
+Als een van deze waarden hun grens overschrijdt dan zal de kwaliteit van het gesprek enorm achteruitgaan. Er moet dus gezorgd worden dat het netwerk snel genoeg is en dat het goed is opgebouwd. Zodat het VOIP aankan. \\ \\
+Vervolgens wordt duidelijk hoe VOIP andere technologieën kan tegenwerken en ongekeerd. Als je in je netwerk gebruikmaakt van zaken die zelf ook veel bandwidth gebruiken, dan kan een veeleisend VOIP met deze technologieën gaan vechten. Op deze manier leiden beide hieronder en gaan de werking van beiden achteruit. In het geval dat je netwerk problemen heeft met de hoge netwerklast door VOIP en andere zaken, dan heb je uiteraard enkele mogelijkheden. Allereerst is het aangeraden op te gaan uitzoeken wat het exact is dat deze hoge netwerklast veroorzaakt. En als het kan verholpen worden dan is het probleem opgelost. Zoniet dan moeten we een oplossing zoeken voor het probleem.  Het meest voor de hand liggende is het upgraden van je netwerkapparatuur zodat deze de last aankan. Soms is het wel eens dat de apparatuur goed is maar er gewoon een uitzonderlijke hoge netwerklast is. In dit geval kan je gaan prioriteren. Op het niveau van je router heb je te optie op QOS instellingen toe te voegen. Je kan verkeer gaan prioriteren.Je kan priotiseren op basis van de ethernetpoort, mac adress of poortnummer. De meest handige hiervan is prioritiseren op basis van de poort. Hier kan je dan eenvoudig weg het UDP verkeer voorang geven op het andere verkeer.\\
+Dit is niet uiteraard niet Ideaal. Niet enkel VOIP maakt gebruik van UDP. Daarom heb je ook nog de optie op te prioriteren op basis van VLAN. Je splits het VOIP verkeer op in een apparte VLAN. En vervolgens geef je deze een hogere prioriteit dan het normale verkeer. Op deze manier zal het VOIP verkeer nooit leiden onder de hoge netwerklast opdat zijn pakketten voorang krijgen op dat van het gewone dataverkeer.
+
 
 
 %% TODO: de structuur en titel van deze hoofdstukken hangen af van je
@@ -357,8 +360,18 @@ Vervolgens wordt duidelijk hoe VOIP andere technologieën kan tegenwerken. Als j
 
 \section{Packet Sniffing}
 
-\paragraph In de wereld van netwerken bestaat er een term genaamd packet sniffing. Dit betekend dat een persoon gaat trachten pakketten te bekijken die worden verstuurd over het netwerk. Als hij dit doet dan ziet hij alle pakketten. Dus niet enkel die van VOIP. En als hij de pakketten ziet van VOIP dan is hij vertrokken. Packet sniffing is vandaag niet meer moeilijk. Er bestaan namelijk gratis programma’s voor. De meest bekende en gebruikte is Wireshark. Officieel is dit programma bedoeld voor beheerders om hun netwerk te kunne analyseren en fouten te kunnen opsporen.  \\
+\paragraph In de wereld van netwerken bestaat er een term genaamd packet sniffing. Dit betekend dat een persoon gaat trachten pakketten te bekijken die worden verstuurd over het netwerk. Als hij dit doet dan ziet hij alle pakketten en hun inhoud. Dus niet enkel die van VOIP. En als hij de pakketten ziet van VOIP dan is hij vertrokken. Packet sniffing is vandaag niet meer moeilijk. Er bestaan namelijk gratis programma’s voor. De meest bekende en gebruikte is Wireshark. Officieel is dit programma gemaakt voor netwerk beheerders om hun netwerk te kunnen analyseren en fouten te kunnen opsporen.  \\
 Maar hoe gaat dit nu net in zijn werk. Het programma wireshark begrijpt de structuur of encapsulatie van verschillende netwerk protocollen of technologieën. Het toont de gebruiker welk pakket van welke aard is. De gebruiker kan dan kiezen welke pakketten van welke protocollen of technologieën hij of zij wil zien. Dus als hij of zij de pakketten filtert op VOIP pakketten dan krijgt hij een mooie lijst met enkel deze pakketten. Vervolgens kan hij gaan zoeken naar informatie in deze pakketten. Wireshark kan nog meer. Hij kan ook het onderscheid maken welke pakketten bij de welk horen. Op deze manier kan je een lijst genereren met gemaakte oproepen binnen je netwerk. Sterker nog het kan via VOMIT(voice over misconfigured internet telephones) deze pakketten omzetten naar een beluisterbaar formaat. Zo kan de gebruiker luisteren naar wat er is gezegd tijdens oproepen.\\
+
+\begin{figure}[H]
+\caption{Voorbeeld van pakketten}
+\includegraphics[scale=0.3]{img/sniffer1}
+\caption{Details van een VOIP/SIP pakket}
+\includegraphics[scale=0.5]{img/sniffer2}
+\caption{Gesprek omgezet naar beluisterbaar formaat}
+\includegraphics[scale=0.5]{img/sniffer3}
+\end{figure}
+
 Dit is een van de grootste dreigingen die mogelijk zijn voor VOIP. Elke vorm van informatie die wordt gecommuniceerd via VOIP is gewoon eenvoudig te beluisteren voor eender wie die op het zelfde netwerk zit. Het belangrijkste is vervolgens om te weten hoe we ons kunnen beschermen tegen deze packet sniffing tools. En er zijn een paar methoden die we kunnen toepassen.  \\
 De eerste methode is ervoor zorgen dat de VOIP toestellen en alles dat gebruik maakt van de VOIP implementatie op een ander netwerk te stoppen dan het normale netwerkverkeer. Ondanks dat je dit fysiek kan doen is dit niet zo’n goedkope oplossing. Daarom gaan we dit virtueel gaan implementeren. We gaan het gewone netwerkverkeer en het VOIP verkeer opsplitsen in verschillende VLAN’s. Op deze manier gedragen deze zich alsof ze in andere netwerken zitten. En zo kan iemand die niet in de VOIP VLAN zit geen pakketten ontvangen of bekijken van VOIP gesprekken.
 Wat is nu net een VLAN? VLAN staat voor Virtual Local Area Network. Vertaald staat dit voor een virtueel lokaal netwerk. Bij VLAN’s ga je je netwerk opsplitsen op router en switch niveau. Je gaat instellen welke toestellen er verbonden zijn met welke VLAN. En op deze manier splits je het verkeer. Fysiek gaat alle verkeer nog steeds via het zelfde netwerk materiaal. Maar virtueel gedragen ze zich als totaal verschillende netwerken. \\
