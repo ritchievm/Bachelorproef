@@ -7,10 +7,13 @@
 \BOOKMARK [0][-]{chapter.3}{Samenwerking met andere Technologie\353n}{}% 7
 \BOOKMARK [0][-]{chapter.4}{Beveiligingsdreigingen}{}% 8
 \BOOKMARK [1][-]{section.4.1}{Packet Sniffing}{chapter.4}% 9
-\BOOKMARK [1][-]{section.4.2}{Phreaking}{chapter.4}% 10
-\BOOKMARK [1][-]{section.4.3}{VLAN Hopping}{chapter.4}% 11
-\BOOKMARK [1][-]{section.4.4}{Verstoren van gesprekken}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.5}{DOS aanvallen}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.6}{SPIT}{chapter.4}% 14
-\BOOKMARK [0][-]{chapter.5}{VOIP met IPV6}{}% 15
-\BOOKMARK [0][-]{chapter.6}{Conclusie}{}% 16
+\BOOKMARK [2][-]{subsection.4.1.1}{Hoe werkt het?}{section.4.1}% 10
+\BOOKMARK [2][-]{subsection.4.1.2}{Virtual LAN's}{section.4.1}% 11
+\BOOKMARK [2][-]{subsection.4.1.3}{encryptie}{section.4.1}% 12
+\BOOKMARK [1][-]{section.4.2}{Phreaking}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.3}{VLAN Hopping}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.4}{Verstoren van gesprekken}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.5}{DOS aanvallen}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.6}{SPIT}{chapter.4}% 17
+\BOOKMARK [0][-]{chapter.5}{VOIP met IPV6}{}% 18
+\BOOKMARK [0][-]{chapter.6}{Conclusie}{}% 19

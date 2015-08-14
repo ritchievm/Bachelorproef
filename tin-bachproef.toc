@@ -20,7 +20,9 @@
 \contentsline {paragraph}{I}{12}{section*.14}
 \contentsline {chapter}{\numberline {4}Beveiligingsdreigingen}{14}{chapter.4}
 \contentsline {section}{\numberline {4.1}Packet Sniffing}{14}{section.4.1}
-\contentsline {paragraph}{I}{14}{section*.15}
+\contentsline {subsection}{\numberline {4.1.1}Hoe werkt het?}{14}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Virtual LAN's}{16}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}encryptie}{18}{subsection.4.1.3}
 \contentsline {section}{\numberline {4.2}Phreaking}{18}{section.4.2}
 \contentsline {section}{\numberline {4.3}VLAN Hopping}{18}{section.4.3}
 \contentsline {section}{\numberline {4.4}Verstoren van gesprekken}{18}{section.4.4}
