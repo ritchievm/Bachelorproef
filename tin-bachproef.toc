@@ -21,10 +21,10 @@
 \contentsline {chapter}{\numberline {4}Beveiligingsdreigingen}{14}{chapter.4}
 \contentsline {section}{\numberline {4.1}Packet Sniffing}{14}{section.4.1}
 \contentsline {paragraph}{I}{14}{section*.15}
-\contentsline {section}{\numberline {4.2}Phreaking}{16}{section.4.2}
-\contentsline {section}{\numberline {4.3}VLAN Hopping}{16}{section.4.3}
-\contentsline {section}{\numberline {4.4}Verstoren van gesprekken}{16}{section.4.4}
-\contentsline {section}{\numberline {4.5}DOS aanvallen}{16}{section.4.5}
-\contentsline {section}{\numberline {4.6}SPIT}{16}{section.4.6}
-\contentsline {chapter}{\numberline {5}VOIP met IPV6}{17}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusie}{18}{chapter.6}
+\contentsline {section}{\numberline {4.2}Phreaking}{18}{section.4.2}
+\contentsline {section}{\numberline {4.3}VLAN Hopping}{18}{section.4.3}
+\contentsline {section}{\numberline {4.4}Verstoren van gesprekken}{18}{section.4.4}
+\contentsline {section}{\numberline {4.5}DOS aanvallen}{18}{section.4.5}
+\contentsline {section}{\numberline {4.6}SPIT}{18}{section.4.6}
+\contentsline {chapter}{\numberline {5}VOIP met IPV6}{19}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusie}{20}{chapter.6}

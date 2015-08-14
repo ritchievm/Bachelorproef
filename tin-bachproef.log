@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.30)  6 AUG 2015 18:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.30)  14 AUG 2015 21:21
 entering extended mode
 **D:/Users/Major/Documents/Github/Bachelorproef/tin-bachproef.tex
 (D:/Users/Major/Documents/Github/Bachelorproef/tin-bachproef.tex
@@ -1128,81 +1128,127 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [14
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 375--378
-
- []
-
 [15pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.378 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-4.2}) has been already used, duplicate ignored
+l.374 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.4.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.378 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-4.3}) has been already used, duplicate ignored
+l.374 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.4.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.378 
-       <D:/Users/Major/Documents/Github/Bachelorproef/img/sniffer1.png> <D:/Use
-rs/Major/Documents/Github/Bachelorproef/img/sniffer2.png> <D:/Users/Major/Docum
-ents/Github/Bachelorproef/img/sniffer3.png>] [16]
+l.374 \newpage
+               <D:/Users/Major/Documents/Github/Bachelorproef/img/sniffer1.png>
+ <D:/Users/Major/Documents/Github/Bachelorproef/img/sniffer2.png> <D:/Users/Maj
+or/Documents/Github/Bachelorproef/img/sniffer3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 375--382
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 375--382
+
+ []
+
+<img/VLAN.png, id=190, 685.05937pt x 357.58594pt>
+File: img/VLAN.png Graphic file (type png)
+ <use img/VLAN.png>
+Package pdftex.def Info: img/VLAN.png used on input line 386.
+(pdftex.def)             Requested size: 479.53828pt x 250.30844pt.
+
+Overfull \hbox (61.2846pt too wide) in paragraph at lines 386--387
+[][] 
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 388.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 388.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 388.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
+
+ []
+
+[17pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.392 ... deze nooit de juiste tag heeft. \newpage
+                                                   <D:/Users/Major/Documents/Gi
+thub/Bachelorproef/img/VLAN.png>] [18]
 Hoofdstuk 5.
-[17
+[19
 
 ]
 Hoofdstuk 6.
-(D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.bbl [18
+(D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.bbl [20
 
 ]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 6.
-) [19
+) [21
 
 ]
 (D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.lof)
 \tf@lof=\write5
- [20
+ [22
 
 ]
 (D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.lot)
 \tf@lot=\write6
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 414.
- [21
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 426.
+ [23
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 414.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 426.
 
 (D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 414.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 414.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 426.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 426.
 Package rerunfilecheck Info: File `tin-bachproef.out' has not changed.
 (rerunfilecheck)             Checksum: 47981AE41C97AC38EAD5527627CBC0A6;1007.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 414.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 426.
  ) 
 Here is how much of TeX's memory you used:
- 10040 strings out of 493921
- 141653 string characters out of 3144876
+ 10083 strings out of 493921
+ 142126 string characters out of 3144876
  328186 words of memory out of 3000000
- 13080 multiletter control sequences out of 15000+200000
- 45373 words of font info for 43 fonts, out of 3000000 for 9000
+ 13105 multiletter control sequences out of 15000+200000
+ 65716 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,11n,43p,1335b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{D:/Program 
-Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<D:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/lm/lmr12.pfb><D:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/lm/lmss12.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmssbx10.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lm
-sso12.pfb>
-Output written on tin-bachproef.pdf (24 pages, 504235 bytes).
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
+st, replaced by a fixed one
+
+{D:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{D:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<D:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/lm/lmr12.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/lm/lmss10.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmss12.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmss8.
+pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><D:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb>
+Output written on tin-bachproef.pdf (26 pages, 567663 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
- 63 named destinations out of 1000 (max. 500000)
- 154 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 283 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
+ 159 words of extra memory for PDF output out of 10000 (max. 10000000)
 

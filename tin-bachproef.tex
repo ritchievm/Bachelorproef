@@ -371,14 +371,26 @@ Maar hoe gaat dit nu net in zijn werk. Het programma wireshark begrijpt de struc
 \caption{Gesprek omgezet naar beluisterbaar formaat}
 \includegraphics[scale=0.5]{img/sniffer3}
 \end{figure}
+\newpage
+Dit is een van de grootste dreigingen die mogelijk zijn voor VOIP. Elke vorm van informatie die wordt gecommuniceerd via VOIP is gewoon eenvoudig te beluisteren voor eender wie die op het zelfde netwerk zit. Het belangrijkste is vervolgens om te weten hoe we ons kunnen beschermen tegen deze packet sniffing tools. En er zijn een paar methoden die we kunnen toepassen.  \\ \\
+De meest voor de hand liggende oplossing voor dit probleem is ervoor te zorgen dat het VOIP verkeer afgescheiden is van het normale netwerkverkeer. Maar een voordeel van VOIP is nu net dat het allemaal op 1 fysiek netwerk gebeurt samen met het normale dataverkeer. De oplossing hiervoor is het implementeren van VLAN's. Vlan staat voor  Virtual Local Area Network. VLAN's staan ons toe om virtueel verschillende netwerken te maken. Fysiek gebeurt alle verkeer uiteraard nog steeds over het zelfde netwerk, maar virtueel is alles gesplitst alsof ze verschillende netwerken waren. Dit geeft ons vele mogelijkheden, en ondanks dat deze proef niet over VLAN's gaat vind ik het toch nuttig om enkele van deze voordelen op te sommen aangezien VLAN's zeer handig zijn bij het beveiligen tegen verschillende dreigingen. 
+\\
+\\
+VLAN's kunnen ingesteld worden op zowel router als switch niveau. Uiteraard heb je wel apparatuur nodig die deze technologie aankan. Zo zijn er bevoorbeeld managed en unmanaged switches. Bij een managed switch krijg je de optie om de switch te gaan instellen naargelang je netwerk setup. Een unmanaged switch is een vrij dom apparaat dat enkel de basistaken aankan.
+Op het niveau van de switch kan je gaan instellen welke poorten er deel uit maken van welke VLAN. In ons netwerk zouden we alle VOIP toestellen op een VLAN stoppen en het normale verkeer op een andere. Een Vlan kan meerdere poorten bevatten en een poort kan lid zijn van meerdere VLAN's. In ons geval moeten we met dit laatste opletten. Als we een poort lid maken van zowel de normale VLAN als de VOIP VLAN, dan kan deze aan het verkeer van beide. En dit maakt het altijd minder veilig. Soms moeten we dit helaas wel doen. Bijvoorbeels als er een Computer is die VOIP software draait dan zal deze in principe ook op de VOIP VLAN moeten zitten.//
+De interesante instellingen voor VLAN's gebeuren op het niveau van de router. Maar met deze interesante instellingen komt ook dat je goed moet nadenken wat je doet.  
 
-Dit is een van de grootste dreigingen die mogelijk zijn voor VOIP. Elke vorm van informatie die wordt gecommuniceerd via VOIP is gewoon eenvoudig te beluisteren voor eender wie die op het zelfde netwerk zit. Het belangrijkste is vervolgens om te weten hoe we ons kunnen beschermen tegen deze packet sniffing tools. En er zijn een paar methoden die we kunnen toepassen.  \\
-De eerste methode is ervoor zorgen dat de VOIP toestellen en alles dat gebruik maakt van de VOIP implementatie op een ander netwerk te stoppen dan het normale netwerkverkeer. Ondanks dat je dit fysiek kan doen is dit niet zo’n goedkope oplossing. Daarom gaan we dit virtueel gaan implementeren. We gaan het gewone netwerkverkeer en het VOIP verkeer opsplitsen in verschillende VLAN’s. Op deze manier gedragen deze zich alsof ze in andere netwerken zitten. En zo kan iemand die niet in de VOIP VLAN zit geen pakketten ontvangen of bekijken van VOIP gesprekken.
-Wat is nu net een VLAN? VLAN staat voor Virtual Local Area Network. Vertaald staat dit voor een virtueel lokaal netwerk. Bij VLAN’s ga je je netwerk opsplitsen op router en switch niveau. Je gaat instellen welke toestellen er verbonden zijn met welke VLAN. En op deze manier splits je het verkeer. Fysiek gaat alle verkeer nog steeds via het zelfde netwerk materiaal. Maar virtueel gedragen ze zich als totaal verschillende netwerken. \\
+\begin{figure}[H]
 
+\caption{Voorbeeld van VLAN membership in een eenvoudig netwerk \protect \footnotemark}
+\includegraphics[scale=0.7]{img/VLAN}
+\end{figure}
+\footnotetext{Gemaakt met de Cisco Packet tracer Tool}
 
+Op deze afbeelding zie je een eenvoudig netwerk met meerdere switches waar normaal verkeer en VOIP verkeer met verbonden zijn. De VOIP toestellen zijn op switch niveau toegekend aan de VLAN voor VOIP verkeer. De normale PC's zijn lid van de normale VLAN. Dit toont aan dat een gemengd netwerk nog steeds kan werken met VLAN's. \\ \\
 
-
+Nu is er nog de kans dat een persoon zich verbind met de ethernet kabel van een VOIP toestel, en op die manier toegang krijgt tot de VOIP VLAN. Hiervoor bestaat er de optie om de VLAN op een poort tagged of untagged te laten verlopen. Bij untagged wordt eender welk toestel dat verbind met die poort lid van de gespecifierde VLAN en zal zijn pakketten worden doorgestuurd naar hun bestemming. Bij tagged VLAN moeten pakketten verzonden vanaf het verbonden toestel effectief de juiste VLAN tag meekrijgen. Dus elk toestel dat gebruik moet maken van de VOIP VLAN zal dus moeten ingesteld worden alvorens deze verbinding kan maken. Als een computer dan gebruik maakt van een VOIP toestel zijn kabel, dan kan deze geen verbinding maken met het VOIP netwerk aangezien deze nooit de juiste tag heeft. \newpage
+VOIP telefoons hebben vaak een interne switch. Dit laat toe dat er een ander toestel via de telefoon verbinding kan maken met het netwerk. Dit is geen probleem als we goed werken met VLAN tagging. We maken de poort lid van de VOIP VLAN maar enkel tagged. En we maken de poort ook lid van de normale VLAN maar ditmaal untagged. Op de telefoon zelf kunnen we eventueel nog instellen welke VLAN tag het 2e apparaat moet krijgen. Het toestel dat verbonden ist met de telefoon zal dan lid zijn van de normale VLAN en de telefoon van de VOIP VLAN. Zelf als de computer verbindt met de kabel bedoeld voor de telefoon, dan zal hij geen verbinding krijgen met het VLAN van VOIP. Maar wel met de normale VLAN voor het dataverkeer. 
 
 
 \section{Phreaking}
