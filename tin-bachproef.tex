@@ -191,8 +191,10 @@ Deze bachlorproef draait rond voice over IP(VOIP). In deze proef stel ik mezelf 
 \chapter*{Voorwoord}
 \label{ch:voorwoord}
 Deze thesis is in het kader van mijn bachlorproef voor toegepaste informatica aan de hogeschool Gent.\\
-Ik wil mijn stagementor en copromotor Krist Vanneste van SmartTelecom NV bedanken voor de hulp en research mogelijk door hem.\\
+Het onderwerp hep ik gekozen omdat het aanleunde bij mijn stage en aangezien het een technologie is die velen kennen maar niet zozeer begrijpen of vertrouwen. 
+Ik wil mijn stagementor en copromotor Krist Vanneste van SmartTelecom NV bedanken voor de hulp en research mogelijk door hem. Door heb was ik in staat om de beveiliging van een ingewikkeld netwerk te kunnen implementeren. Dit zowel voor normaal dataverkeer als voor VOIP verkeer. Uiteindelijk is mijn onderwerk geinspireerd door deze kans van samenwerking.\\
 Ook bedank ik mijn stage partner Dries Vandooren voor de nuttige invloed tijdens de stage en in het onderwerp VOIP.
+
 % TODO: Vergeet ook niet te bedankten wie je geholpen/gesteund/... heeft
 
 \tableofcontents
@@ -318,12 +320,11 @@ Hier ga ik opsommen wat de voornaamste dreigingen zijn op het gebied van beveili
 \chapter{Methodologie}
 \label{ch:methodologie}
 
-
 \paragraph Voor ik startte met mijn stage en mijn bachelor proef, was mijn kennis over VOIP vrij miniem. Ik wist in grote lijnen wat het deed maar niet zozeer hoe het dat deed. Mijn eerste stap naar het oplossen van mijn vragen was eenvoudig. Mijn stageliep ik aan het bedrijf SmartTelecom NV. Dit bedrijf is een provider van onder andere VOIP systemen. Door mee te lopen met mijn stagementor Krist Vanneste kreeg ik als het ware een spoedcursus over VOIP. De eerste weken leerde ik hoe VOIP werkte en waar je op moest letten. We startte bij aan de basis met telefoons en werkten stap voor stap op naar centrales en hele netwerken. Ik hielp onder andere met het implementeren van VOIP in zowel bestaande als nieuwe netwerken. Op deze manier kwam ik veel te weten over de praktijk van de zaak.een voorbeeld hiervan is dat bestaande netwerken soms niet optimaal zijn opgebouwd. Deze werken dan wel voor de basis toepassingen maar eens je er VOIP bij implementeerd zijn er problemen. 
-
 \paragraph De tweede fase van mijn onderzoek was mijn bevindingen te gaan staven. Ik had ideeën over hoe VOIP in elkaar zit en waar je op moet letten bij het implementeren. Maar alvorens ik mijn bachelorproef kon beginnen schrijven moest ik uiteraard zorgen dat deze kennis correct was. Ik ben daarvoor aan het opzoeken geslaan. Ik ben beginnen opzoeken hoe VOIP werkt en wat experts zeggen dat de aandachtspunten zijn bij het opzetten van VOIP. Ik was dan ook zeer tevreden wanneer ik dit las en doorhad dat dit perfect aansloot met mijn eigen reeds vergaarde kennis.
 
 \paragraph Waar ik bij het eerste en 2e deel de stage en opzoekwerk gesplitst deed deed ik bij mijn derde fase dit niet. In deze fase ging ik opzoek naar methoden om VOIP te misbruiken of om dit te dwarsbomen. Ik onderzocht hoe dit kon en hoe ik me ertegen kan beveiligen. Vervolgens ging ik dit controleren en implementeren bij een iets grotere klant. Deze klant is een bedrijvencentrum met vele verschillende partijen die toegang hebben tot het netwerk. Een zeer goede beveiliging was hier nodig en dit liet me toe om deze beveiligingen zelf te implementeren en te documenteren.
+\newpage
 
 
 
@@ -355,7 +356,7 @@ Dit is niet uiteraard niet Ideaal. Niet enkel VOIP maakt gebruik van UDP. Daarom
 %% TODO: de structuur en titel van deze hoofdstukken hangen af van je
 % eigen onderzoek. Elke fase in je onderzoek kan een eigen hoofdstuk krijgen. Kies telkens een gepaste titel. ``Corpus'' is *GEEN* gepaste titel
 
-\chapter{Beveiligingsdreigingen}
+\chapter{Beveiligingsdreigingen en oplossingen}
 \label{ch:Beveiligingsdreigingen}
 
 \section{Packet Sniffing}
@@ -399,13 +400,52 @@ Op deze afbeelding zie je een eenvoudig netwerk met meerdere switches waar norma
 Nu is er nog de kans dat een persoon zich verbind met de ethernet kabel van een VOIP toestel, en op die manier toegang krijgt tot de VOIP VLAN. Hiervoor bestaat er de optie om de VLAN op een poort tagged of untagged te laten verlopen. Bij untagged wordt eender welk toestel dat verbind met die poort lid van de gespecifierde VLAN en zal zijn pakketten worden doorgestuurd naar hun bestemming. Bij tagged VLAN moeten pakketten verzonden vanaf het verbonden toestel effectief de juiste VLAN tag meekrijgen. Dus elk toestel dat gebruik moet maken van de VOIP VLAN zal dus moeten ingesteld worden alvorens deze verbinding kan maken. Als een computer dan gebruik maakt van een VOIP toestel zijn kabel, dan kan deze geen verbinding maken met het VOIP netwerk aangezien deze nooit de juiste tag heeft. \newpage
 VOIP telefoons hebben vaak een interne switch. Dit laat toe dat er een ander toestel via de telefoon verbinding kan maken met het netwerk. Dit is geen probleem als we goed werken met VLAN tagging. We maken de poort lid van de VOIP VLAN maar enkel tagged. En we maken de poort ook lid van de normale VLAN maar ditmaal untagged. Op de telefoon zelf kunnen we eventueel nog instellen welke VLAN tag het 2e apparaat moet krijgen. Het toestel dat verbonden ist met de telefoon zal dan lid zijn van de normale VLAN en de telefoon van de VOIP VLAN. Zelf als de computer verbindt met de kabel bedoeld voor de telefoon, dan zal hij geen verbinding krijgen met het VLAN van VOIP. Maar wel met de normale VLAN voor het dataverkeer. 
 
-\subsection{encryptie}
+\subsection{Encryptie}
+In sommige gevallen is het afschijden van je VOIP telefonie niet geheel mogelijk. Er bestaat software \footnote{voorbeeld: http://www.xtelsio.com/} die het toestaat om te bellen met een VOIP toestel vanaf de computer. Op deze manier moet de gebruiker nooit nummer lezen van het scherm en intoetsen maar kan hij direct bellen. Dit is een zeer handige tool voor bijvoorbeeld onthaal bedienden. Om deze software te kunnen gebruiken moet deze computer toegang hebben tot het VOIP netwerk. Waar dit altijd zal zorgen voor een beveiligingsrisico is er niet direct een perfecte oplossing om deze computer tegen te houden om af te luisteren van gesprekken. \\ \\
+We hebben wel een optie die het geheel veiliger maakt en het moeilijker maakt voor indiviuen om via packet sniffing kwaad te doen. We kunnen gesprekken via de telefoons versleutelen. Er bestaat een protocol genaamd SRTP(Secure Real-time Transport Protocol). Dit staat je toe om encryptie en authenticatie te implementeren op je RTP/VOIP stream. SRTP is ontwikkeld om de confidentialiteit van gesprekken en de integriteit van pakketten. Op zichzelf kan SRTP niets doen, het zorgt niet voor het versturen van pakketten. Het is enkel bedoeld om de reeds bestaande datastroom te beveiligen en te garanderen. Een VOIP gesprek bestaad uit 2 delen: de oproep(nummer draaien en verbinding maken met bestemde) en het gesprek zelf. SRTP is enkel van toepassing op het gesprek zelf. \\ \\
+Maar hoe gaat het nu net in zijn werk. SRTP gaat het normale RTP pakket nemen en hieraan 2 zaken toevoegen: een Master Key Identifier en een authenticatie tag. Hieronder vind je een illustratie van het pakket. 
+\newpage
 
-\section{Phreaking}
-\section{VLAN Hopping}
+\begin{figure}[H]
+\caption{Voorbeeld van VLAN membership in een eenvoudig netwerk \protect \footnotemark}
+\includegraphics[scale=0.8]{img/SRTP}
+\end{figure}
+\footnotetext{Uit document IETF: RFC 3711 - Section 3.1}
+
+Het genereren van deze master key gebeurt niet door SRTP. Er zijn standaarden zoals MIKEY(multimedia internet KEYing) die deze kunnen genereren. Het doel is om een master key te genereren die gedeeld is tussen 2 of meerdere gebruikers. Deze key is ook niet direct gebruikt als versleuteling maar het wordt gebruikt om een encryptiesleutel te genereren. Deze sleutel noemen we de session key. Deze session key is niet blijvend. Deze zal opnieuw gegenereerd worden. Bij het effectief versleutelen van het pakket wordt dan uiteindelijk een authentication tag gegenereerd die data over de authenticatie bevat. Deze is ook nodig bij de ontvanger om het pakket de decrypteren. \\ Voor meer informatie over SRTP verwijs ik naar het IETF document over dit protocol.\footnote{document IETF: RFC 3711}
+\\ \\
+Als we dit gaan samenvatten kunnen we stellen dat encryptie een zeer handige techniek is om de pakketten van VOIP gesprekken te beveiligen. In mijn mening werkt deze oplossing voor ons probleem best in samenwerking met VLAN's. Op deze manier ga je pakketten beveiligen tegen afluisteraars en ga je het aantal mogelijke afluisteraard enorm verminderen. Als we kijken naar het kost plaatje van deze oplossing dan is dit normaal nul. De enige manier om toch kosten te krijgen bij de implementatie van SRTP is als de VOIP toestellen zo verouderd zijn dat zij dit nog niet ondersteunen. Maar aangezien dit protocol al bestaat sinds 2004, zouden bijna alle toestellen van vandaag dit moeten ondersteunen.
+
+
+\newpage
+\subsection{Apart netwerk}
+Een optie die altijd op tafel ligt is ervoor zorgen dat er helemaal geen contact is tussen je VOIP verkeer en je dataverkeer. Waar we dit virtueel doen bij VLAN(enkel intern) kunnen we dit uiteraard ook fysiek doen. Er zijn bedrijven waarbij de informatie verstuurd over het VOIP gedeelte van het netwerk enorm kritiek is. Deze bedrijven kiezen er dan ook soms voor om een apart netwerk aan te leggen enkel en alleen voor hun VOIP. Dit houd in dat het aantal netwerkapparaten bijna verdubbeld. Dit betekend ook dat ze een extra internetlijn aankopen enkel en alleen voor dit VOIP netwerk. Uiteraard is dit een zeer veilige oplossing. Er is zelf geen fysiek contact tussen het normale en het VOIP verkeer. Het is dus een eenvoudige zeer effectieve oplossing. Het heeft wel enkele grote nadelen.
+\\ \\
+Ten eerste is er de enorme kost die hier aan gekoppeld is. Elk stuk netwerkapparatuur moet dubbel aangekocht worden. Daarbij komt nog de maandelijkse kost voor een extra internetlijn. Nu bij kleine bedrijven is dit niet direct een probleem. Een extra router en enkele switches plus een extra internet lijn. Hier is de kost nog vrij miniem. Het probleem is dat bij bedrijven die grote gebouwen en enorm veel werknemers hebben, dat hierbij de kost enorm oploopt.\\
+Een 2e netwerk betekend ook dat alles dubbel bekabeld wordt. Dit draagt niet alleen bij aan het kocht plaatje van deze onderneming, maar ook zorgt dit ervoor dat er naar elke werknemer twee keer zoveel bekabeling loopt. Opnieuw is dit niet direct een groot probleem voor kleine bedrijven, maar voor grote bedrijven wordt dit een enorme onderneming. 
+\\ \\
+Deze oplossing is effectief en zorgt ervoor dat er vanop het normale netwerk niet meer gezocht kan worden naar pakketten van VOIP gesprekken. Een probleem is er wel als een individue zich verbindt met de kabel bedoeld voor een VOIP toestel. Op het moment dat hij dit doet heeft hij volledige toegang tot het netwerk van VOIP. Waar we bij VLAN's een antwoord hadden hiervoor hebben we dat hier niet. 
+\\ \\
+Als we uiteindelijk de voor en nadelen van deze techniek op een lijstje zetten dat realiseren we ons het volgende. Deze techniek is duur en zorgt voor veel extra werk, zowel voor het aanleggen als het onderhouden van het extra netwerk. Dit extra netwerk zorgt ervoor dat er geen enkel contact mogelijk is tussen het normale dataverkeer en het VOIP verkeer. Maar voor een individue die toegang heeft tot een VOIP toestel en deze zijn kabel, is dit extra netwerk nutteloos omdat hij eenvoudig toegang kan krijgen. Deze oplossing is dus een mogelijke oplossing voor dit probleem maar niet op zichzelf. Om deze oplossing te laten werken moet er dus nog gebruik gemaakt worden van bijvoorbeeld encryptie.op deze manier kan iemand die toch toegang krijgt tot het VOIP netwerk en pakketten afluisterd, geen informatie kan halen uit deze pakketten.
+
+
+\newpage
+\section{Identiteit fraude}
+Neen dit is geen proef over informatica recht, nochtans is het aannemen van een andere identiteits bij VOIP gesprekken makkelijker dan bij traditionele telefonie. In het geval van een normaal gesprek gebeurt er het volgende. Het gesprek tussen 2 toestellen verloopt via een server bij de VOIP provider of intern via de PBX centrale. In het pakket dat de gebelde ontvangt staat onder andere het server adres, de bestemmeling en de afzender. Caller-ID gaat out van wie de afzender is door wat er in dit pakket staat en dit pakket is opgebouwd door de server via wie het gesprek verloopt.\\
+Stel nu dat er een slecht individu wil bellen maar de andere wil laten denken dat hij iemand anders is. Als hij toegang heeft tot de server via wie het gesprek zal gaan dan kan hij het pakket zelf opstellen en dan is het gelukt. Nu is niet niet mogelijk om de server van de provider te beïnvloeden. Er is niets wat hem tegenhoud om het gesprek via een server te laten gaan van zichzelf. Hij kan eenvoudig het pakket aanpassen zodat het een andere beller weergeeft dan zichzelf. De ontvanger zal dit pakket krijgen en bevestiging sturen naar de server van de beller. Deze server weet wie de beller is en stuurt vervolgens het pakket door naar hem. Vervolgens is het gesprek begonnen en heeft de gebelde geen idee met wie hij echt belt. In interne netwerken is er de optie om mensen zelf te laten instellen wat hun caller-ID is. Het is dan in te stellen op de centrale of deze custom caller-ID's toegelaten zijn of niet.
+\\ \\
+Caller-ID is niet nieuw in VOIP, het bestond al bij traditionele telefonie. Alleen is het wel makkelijker geworden bij VOIP dan vroeger. Er bestaan verschillende open source proxy server softwares zoals Asterix\footnote{http://www.asterisk.org/}. Deze zijn zeer flexibel en kunnen gebruikt worden voor vele doeleinden. Het nadeel hiervan is dan ook uiteraard dat ze bruikbaar zijn voor slechte doeleinden. 
+\\ \\
+Je kan je niet echt beveiligen hiertegen aangezien er geen mogelijk is om te weten of de oproep komt van een correcte of incorrecte server. Het is wel zo dat bedrijven en voip providers erop worden gedrukt dat er instellingen zijn tegen caller-ID spoofing van binnenuit. Providers kunnen instellen op de centrale's(bij de bedrijven zelf) dat een oproep enkel mag verstuurd worden als de caller-ID overeenkomt met een nummer die eigendom is van het bedrijf.
+
+\newpage
+
+\section{Phreaking?}
+\section{VLAN Hopping?}
 \section{Verstoren van gesprekken}
-\section{DOS aanvallen}
-\section{SPIT}
+\section{DOS aanvallen?}
+\section{SPIT?}
+\section{Voorbeeld Netwerk}
 
 \chapter{VOIP met IPV6}
 \label{ch:VOIP met IPV6}
