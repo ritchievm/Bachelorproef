@@ -24,12 +24,11 @@
 \contentsline {subsection}{\numberline {4.1.2}Virtual LAN's}{16}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Encryptie}{18}{subsection.4.1.3}
 \contentsline {subsection}{\numberline {4.1.4}Apart netwerk}{20}{subsection.4.1.4}
-\contentsline {section}{\numberline {4.2}Identiteit fraude}{21}{section.4.2}
-\contentsline {section}{\numberline {4.3}Phreaking?}{22}{section.4.3}
-\contentsline {section}{\numberline {4.4}VLAN Hopping?}{22}{section.4.4}
-\contentsline {section}{\numberline {4.5}Verstoren van gesprekken}{22}{section.4.5}
-\contentsline {section}{\numberline {4.6}DOS aanvallen?}{22}{section.4.6}
-\contentsline {section}{\numberline {4.7}SPIT?}{22}{section.4.7}
-\contentsline {section}{\numberline {4.8}Voorbeeld Netwerk}{22}{section.4.8}
-\contentsline {chapter}{\numberline {5}VOIP met IPV6}{23}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusie}{24}{chapter.6}
+\contentsline {section}{\numberline {4.2}Identiteits dreigingen}{21}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Caller-ID spoofing}{21}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Call Hijacking}{22}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Besluit}{24}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Kwaliteits dreigingen}{25}{section.4.3}
+\contentsline {section}{\numberline {4.4}Voorbeeld Netwerk}{26}{section.4.4}
+\contentsline {chapter}{\numberline {5}VOIP met IPV6}{27}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusie}{28}{chapter.6}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.30)  15 AUG 2015 19:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.30)  16 AUG 2015 20:42
 entering extended mode
 **D:/Users/Major/Documents/Github/Bachelorproef/tin-bachproef.tex
 (D:/Users/Major/Documents/Github/Bachelorproef/tin-bachproef.tex
@@ -919,7 +919,7 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 131.
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<img/HG-beeldmerk-woordmerk.png, id=91, 557.2017pt x 611.4042pt>
+<img/HG-beeldmerk-woordmerk.png, id=87, 557.2017pt x 611.4042pt>
 File: img/HG-beeldmerk-woordmerk.png Graphic file (type png)
 
 <use img/HG-beeldmerk-woordmerk.png>
@@ -1068,7 +1068,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5] [6] <img/TCP.jpg, id=158, 348.55219pt x 240.14719pt>
+[5] [6] <img/TCP.jpg, id=153, 348.55219pt x 240.14719pt>
 File: img/TCP.jpg Graphic file (type jpg)
  <use img/TCP.jpg>
 Package pdftex.def Info: img/TCP.jpg used on input line 273.
@@ -1098,7 +1098,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 350--353
 Hoofdstuk 4.
 [14
 
-] <img/sniffer1.png, id=205, 1445.4pt x 404.26031pt>
+] <img/sniffer1.png, id=200, 1445.4pt x 404.26031pt>
 File: img/sniffer1.png Graphic file (type png)
  <use img/sniffer1.png>
 Package pdftex.def Info: img/sniffer1.png used on input line 372.
@@ -1108,13 +1108,13 @@ Overfull \hbox (15.36967pt too wide) in paragraph at lines 372--373
 [][]
  []
 
-<img/sniffer2.png, id=206, 763.35187pt x 290.58563pt>
+<img/sniffer2.png, id=201, 763.35187pt x 290.58563pt>
 File: img/sniffer2.png Graphic file (type png)
  <use img/sniffer2.png>
 Package pdftex.def Info: img/sniffer2.png used on input line 374.
 (pdftex.def)             Requested size: 381.675pt x 145.29245pt.
 
-<img/sniffer3.png, id=207, 800.23969pt x 340.27126pt>
+<img/sniffer3.png, id=202, 800.23969pt x 340.27126pt>
 File: img/sniffer3.png Graphic file (type png)
  <use img/sniffer3.png>
 Package pdftex.def Info: img/sniffer3.png used on input line 376.
@@ -1150,7 +1150,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 381--388
 
  []
 
-[16] <img/VLAN.png, id=224, 685.05937pt x 357.58594pt>
+[16] <img/VLAN.png, id=219, 685.05937pt x 357.58594pt>
 File: img/VLAN.png Graphic file (type png)
  <use img/VLAN.png>
 Package pdftex.def Info: img/VLAN.png used on input line 393.
@@ -1188,7 +1188,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 404--407
 
  []
 
-[18] <img/SRTP.png, id=241, 412.6617pt x 271.7352pt>
+[18] <img/SRTP.png, id=236, 412.6617pt x 271.7352pt>
 File: img/SRTP.png Graphic file (type png)
  <use img/SRTP.png>
 Package pdftex.def Info: img/SRTP.png used on input line 411.
@@ -1221,61 +1221,97 @@ Underfull \hbox (badness 10000) in paragraph at lines 422--430
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 434--440
+Underfull \hbox (badness 10000) in paragraph at lines 436--440
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 444--448
+
+ []
+
+[22] <img/Hijack.png, id=261, 386.94562pt x 226.59656pt>
+File: img/Hijack.png Graphic file (type png)
+ <use img/Hijack.png>
+Package pdftex.def Info: img/Hijack.png used on input line 453.
+(pdftex.def)             Requested size: 270.86008pt x 158.6165pt.
+
+[23pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.466 \newpage
+               <D:/Users/Major/Documents/Github/Bachelorproef/img/Hijack.png>]
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 475--484
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--440
+Underfull \hbox (badness 10000) in paragraph at lines 475--484
 
  []
 
-[21] [22]
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--484
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--484
+
+ []
+
+[25] [26]
 Hoofdstuk 5.
-[23
+[27
 
 ]
 Hoofdstuk 6.
-(D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.bbl [24
+(D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.bbl [28
 
 ]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 6.
-) [25
+) [29
 
 ]
 (D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.lof)
 \tf@lof=\write5
- [26
+ [30
 
 ]
 (D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.lot)
 \tf@lot=\write6
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 474.
- [27
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 512.
+ [31
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 474.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 512.
 
 (D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 474.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 474.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 512.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 512.
 Package rerunfilecheck Info: File `tin-bachproef.out' has not changed.
-(rerunfilecheck)             Checksum: 923159118F2BE534E63BC77E11B1ACB8;1425.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 474.
+(rerunfilecheck)             Checksum: D3D76519035FE803D352F2C91238C5F6;1397.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 512.
  ) 
 Here is how much of TeX's memory you used:
- 10109 strings out of 493921
- 142467 string characters out of 3144876
- 328204 words of memory out of 3000000
- 13115 multiletter control sequences out of 15000+200000
+ 10121 strings out of 493921
+ 142642 string characters out of 3144876
+ 328207 words of memory out of 3000000
+ 13118 multiletter control sequences out of 15000+200000
  65716 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,11n,43p,1335b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exi
-st, replaced by a fixed one
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not ex
+ist, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
 , replaced by a fixed one
 
 {D:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{D:/Program Fil
@@ -1285,9 +1321,9 @@ type1/public/lm/lmss10.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
 c/lm/lmss12.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmss8.
 pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><D:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb>
-Output written on tin-bachproef.pdf (30 pages, 609355 bytes).
+Output written on tin-bachproef.pdf (34 pages, 638246 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 83 named destinations out of 1000 (max. 500000)
- 212 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 370 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

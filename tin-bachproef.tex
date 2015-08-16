@@ -428,23 +428,61 @@ Deze oplossing is effectief en zorgt ervoor dat er vanop het normale netwerk nie
 \\ \\
 Als we uiteindelijk de voor en nadelen van deze techniek op een lijstje zetten dat realiseren we ons het volgende. Deze techniek is duur en zorgt voor veel extra werk, zowel voor het aanleggen als het onderhouden van het extra netwerk. Dit extra netwerk zorgt ervoor dat er geen enkel contact mogelijk is tussen het normale dataverkeer en het VOIP verkeer. Maar voor een individue die toegang heeft tot een VOIP toestel en deze zijn kabel, is dit extra netwerk nutteloos omdat hij eenvoudig toegang kan krijgen. Deze oplossing is dus een mogelijke oplossing voor dit probleem maar niet op zichzelf. Om deze oplossing te laten werken moet er dus nog gebruik gemaakt worden van bijvoorbeeld encryptie.op deze manier kan iemand die toch toegang krijgt tot het VOIP netwerk en pakketten afluisterd, geen informatie kan halen uit deze pakketten.
 
-
 \newpage
-\section{Identiteit fraude}
+\section{Identiteits dreigingen}
+Bij dreigingen voor de identiteit denk je direct aan iemand die zich voordoet als een ander op het VOIP netwerk. Zo is er bijvoorbeeld je voordoen als een ander bij het bellen, maar ook telefoons naar jou laten komen terwijl die helemaal niet voor jou bedoeld zijn. Gesprekken tussen 2 personen kan ook gecontroleerd worden door een 3e persoon die zich verborgen houd en alle gesproken informatie opslaat. Dus met dit soort dreigingen doel ik op wanneer iemand zich voordoet als iemand anders om zo aan informatie te geraken.
+
+\subsection{Caller-ID spoofing}
 Neen dit is geen proef over informatica recht, nochtans is het aannemen van een andere identiteits bij VOIP gesprekken makkelijker dan bij traditionele telefonie. In het geval van een normaal gesprek gebeurt er het volgende. Het gesprek tussen 2 toestellen verloopt via een server bij de VOIP provider of intern via de PBX centrale. In het pakket dat de gebelde ontvangt staat onder andere het server adres, de bestemmeling en de afzender. Caller-ID gaat out van wie de afzender is door wat er in dit pakket staat en dit pakket is opgebouwd door de server via wie het gesprek verloopt.\\
 Stel nu dat er een slecht individu wil bellen maar de andere wil laten denken dat hij iemand anders is. Als hij toegang heeft tot de server via wie het gesprek zal gaan dan kan hij het pakket zelf opstellen en dan is het gelukt. Nu is niet niet mogelijk om de server van de provider te beïnvloeden. Er is niets wat hem tegenhoud om het gesprek via een server te laten gaan van zichzelf. Hij kan eenvoudig het pakket aanpassen zodat het een andere beller weergeeft dan zichzelf. De ontvanger zal dit pakket krijgen en bevestiging sturen naar de server van de beller. Deze server weet wie de beller is en stuurt vervolgens het pakket door naar hem. Vervolgens is het gesprek begonnen en heeft de gebelde geen idee met wie hij echt belt. In interne netwerken is er de optie om mensen zelf te laten instellen wat hun caller-ID is. Het is dan in te stellen op de centrale of deze custom caller-ID's toegelaten zijn of niet.
 \\ \\
 Caller-ID is niet nieuw in VOIP, het bestond al bij traditionele telefonie. Alleen is het wel makkelijker geworden bij VOIP dan vroeger. Er bestaan verschillende open source proxy server softwares zoals Asterix\footnote{http://www.asterisk.org/}. Deze zijn zeer flexibel en kunnen gebruikt worden voor vele doeleinden. Het nadeel hiervan is dan ook uiteraard dat ze bruikbaar zijn voor slechte doeleinden. 
-\\ \\
+\newpage
 Je kan je niet echt beveiligen hiertegen aangezien er geen mogelijk is om te weten of de oproep komt van een correcte of incorrecte server. Het is wel zo dat bedrijven en voip providers erop worden gedrukt dat er instellingen zijn tegen caller-ID spoofing van binnenuit. Providers kunnen instellen op de centrale's(bij de bedrijven zelf) dat een oproep enkel mag verstuurd worden als de caller-ID overeenkomt met een nummer die eigendom is van het bedrijf.
 
+\subsection{Call Hijacking}
+De titel is vrij duidelijk, bij deze dreiging gaat iemand trachten een oproep niet naar de normale bestemming te laten gaan maar naar zichzelf. Op deze manier denkt de beller bij de juiste persoon te zijn terwijl dit niet zo is. Een andere vorm van hijacking is een oproep beïnvloeden dat deze via jouw beheerde proxy gaat. Op deze manier ben je een 3e partij die volledige controle heeft over de oproep. 
+\\ \\
+De eerste vorm van hijacking is registratie hijacking. Hierbij ga je beller doen geloven dat jij de bestemmeling bent. Elke gebruiker van het VOIP netwerk registreerd zich met de centrale met behulp van een sip account. Deze registratie gebeurt door een pakket te sturen naar de centrale met de gegevens erin. In dit pakket staat ook een tijd gedifinieerd in seconden. Dit specifieerd hoe lang de registratie geldig is. Stel dat de registratie vervalt na 3600 seconden, dan moet na een uur de registratie opnieuw gebeuren. Als op het moment dat de registratie vervalt, een aanvallend individue een zelf gemaakt registratie pakket opsteld maar met zijn IP adress in plaats van het originele. Dan denkt de centrale dat de account geregistreerd is op zijn locatie. Elke oproep die nu gemaakt wordt naar de legitime persoon komt terecht op de nieuwe locatie bij de hijacker. Deze heeft nu de mogelijkheid om zich voor te doen als de persoon die jij belt en zo mogelijk informatie te achterhalen die niet voor hem bedoeld is.\\
+Deze techniek kan enkel werken als je pakketten kan afluisteren. Dus als je een of meerdere van de zaken doet uit deel 4.1, dan zou een persoon de inhoud van de pakketten niet meer kunnen bekijken. En als hij dit niet kan dan kan hij nooit het registratiepakket namaken en aanpassen.
+\newpage
+De tweede vorm van hijacking is uitgebreider. Hier trachten ervoor te zorgen dat een gesprek niet verloopt via de normale centrale of proxy, maar via een proxy die jezelf beheert. Om dit te berijken gaat hij beide partijen laten denken dat hij de andere persoon is, en vervolgens stuurt hij de pakketten door naar de bestemde. Zo weten de beller en ontvanger niets maar heeft hij wel volledige controle over het gesprek en de informatie die erin wordt uitgewisseld.\\
+Aanschouw volgende opstelling in een voorbeeld netwerk.
+\begin{figure}[H]
+\caption{Voorbeeld van VLAN membership in een eenvoudig netwerk \protect \footnotemark}
+\includegraphics[scale=0.7]{img/Hijack}
+\end{figure}
+\footnotetext{Afbeelding gemaake met Cisco Packet Tracer}
+Het volgende is het proces dat wordt doorlopen om de hijacking te voltooien.
+\begin{itemize}
+	\item De beller stuurt een uitnodiging om te bellen naar de ontvanger.
+	\item De hijacker stuurt een antwoord bericht naar de beller zogezegt van de ontvanger. Hij geeft ook mee dat er een nieuw adres is naarwaar de oproep moet gaan.
+	\item Om dit nieuw adress te bevestigen stuurt de beller een nieuwe uitnodiging naar de ontvanger maar ditmaal op het nieuwe adres, wat in feite de hijack proxy is.
+	\item De hijacker stuurt een bevestigings pakket naar de beller zodat de connectie tussen hem en de beller tot stand is gebracht. 
+	\item Tegelijkertijd stuurt de hijacker ook een uitnodiging naar de ontvanger met de caller-id van de beller.
+	\item De ontvanger bevestigd dit in de veronderstelling dat bij met de beller in gesprek zal gaan.
+	\item Tijdens het gesprek zal de hijack proxy de pakketten van de beller naar de ontvanger sturen en vice versa. 
+\end{itemize}
+\newpage
+Vervolgens heeft de hijacker volledige controle over niet alleen het gesprek, maar ook over alle informatie die de beller en de ontvanger uitwisselen met elkaar. \\
+Om dit te bekomen is het opnieuw nodig om pakketten te kunnen afluisteren. Als je dit wegneemt dan weet de hijack proxy nooit dat er een uitnodiging om te bellen is verstuurd. En dan kan hij daar ook niet op handelen.
+
+\subsection{Besluit}
+Ondanks dat er verschillende manieren zijn waarop dat je gesprek kan worden gemanipuleerd zodat je niet direct of helemaal niet naar de bestemmeling gaat, is het vrij eenvoudig om je netwerk er tegen te beveiligen. Het enige waar we ons niet tegen kunnen beveiligen is caller-ID spoofing. Uiteindelijk is de beste raad hiervoor om caller-ID niet te vertrouwen. En als er kritieke informatie zal worden gecommuniceerd zorg dan dat je weet dat je correct verbonden bent. 
 \newpage
 
-\section{Phreaking?}
-\section{VLAN Hopping?}
-\section{Verstoren van gesprekken}
-\section{DOS aanvallen?}
-\section{SPIT?}
+\section{Kwaliteits dreigingen}
+Met dreigingen voor de kwaliteit bedoel ik de kwaliteit van de gegevens stream en van het gesprek. Doordat VOIP gebruik maakt van het netwerk, is het ook blootgesteld aan de dreigingen die een normaal dataverkeer heeft. Er zijn methoden waarop een gegevens stroom  kan worden aangevallen met als doel om verstoren te verstoren of te onderbreken. De methode waar iedereen van weet is de Denial Of Service(DOS). Ook is er DDOS\footnote{Distributed Denial Of Service: een DOS aanval op een doelwit vanop meerdere computers} maar dit heeft uiteindelijk het zelfde effect. Waar een DOS aanval op een normale dataverkeer deze kan vertragen of verstoren, is een aanval op een VOIP stream zeer snel zeer effectief. 
+\\ \\
+Zoals eerder al vermeld wordt een gesprek gestart met een uitnodiging\footnote{Dit is een sip pakket met de benodigde gegevens} van de beller. Als de ontvanger dit krijgt en de oproep aanvaard zal hij een bevestiging's pakket sturen naar de beller. Een persoon die een DOS aanval wil uitvoeren kan in dit geval de ontvanger bestoken met een heleboel van die uitnodiging's pakketten. Op deze manier krijgt de ontvanger zo'n grote hoeveelheid pakketten binnen dat hij deze nietmeer kan afhandelen. En de echte uitnodiging van de beller gaat dan verloren. Op deze manier kan een individue ervoor zorgen dat een persoon geen inkomende telefoons meer kan ontvangen.
+\\ \\
+Om dit effect te verkrijgen is er nog een andere methode. Indien de ontvanger een oproep niet aanvaard dan wordt er een annulatie pakket verstuurd. Nu kan een aanvallend individue deze annulatie pakketten versturen in naam van de ontvanger. Zo lijkt het voor de beller alsof zijn oproep niet beantwoord wordt. Waar de eerste methode in principe kan bij versleutelde pakketten kan dat hier niet. Om dit type DOS aanval te kunnen uitvoeren moet je pakketten kunnen lezen.
+\\ \\
+Deze 2 methoden zorgen ervoor dat een gesprek nooit tot stand komt. Nu zijn er ook mogelijkheden om een bestaand gesprek te beëindigen. Wanneer een van de 2 bellers de oproep beëindigd wordt er een vaarwel pakket gestuurd. Zo weet de andere partij dat het gesprek gedaan is. Wanneer onze aanvaller dit pakket stuurt in naam van een van de 2 bellers, dan wordt het gesprek beëindigd alsof dat de bedoeling was. Dit is opnieuw niet mogelijk als er encryptie is toegepast op het VOIP verkeer.
+\\ \\
+Een laatste manier om een bestaand gesprek te beëindigen is als volgt. De gegevens stroom van een voip gesprek bestaat uit RTP pakketten. Wanneer een aanvallend persoon een enorme hoeveelheid van deze pakketten stuurt naar een van de bellers, dan kan het zijn dat zijn toestel deze niet allemaal kan afhandelen. Dit zal leiden tot een slechte kwaliteit van het gesprek en uiteindelijk kan dit zelf leiden tot het beëindigen van het gesprek. Net zoals de eerste methode is deze mogelijk met of zonder encryptie. De enige maatregel die je kan nemen hiertegen is het splitsen van je normaal verkeer en je VOIP verkeer. 
+
+
 \section{Voorbeeld Netwerk}
 
 \chapter{VOIP met IPV6}
