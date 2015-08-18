@@ -251,9 +251,9 @@ Bij een beheren van je eigen PBX is er een investering in materiaal, maar dit ge
 \\
 Als we naar al deze voor en nadelen kijken en we zien alle extra's dat VOIP aanbied, dan is alles positief. Nu is de vraag of en hoe VOIP dit allemaal kan. Om te begrijpen hoe VOIP werkt gaan we kijken naar een model dat al lang word gebruikt op het internet namelijk het TCP/IP model. Het TCP/IP model is een aangepaste variant van het OSI model.
 TCP/IP is een groep van netwerk protocollen. En een protocol is een regel die bepaald verkeer over een netwerk gaat regelen. Je hebt protocollen voor gewoon dataverkeer en je hebt er die strikt dienen voor VOIP. Elk van die protocollen komt overeen met een laag van het TCP/IP model. Ik ga de verschillende lagen niet beschrijven tenzij het nodig is om alles te begrijpen.
-Een pakket zal van start tot einde van zijn tocht elke laag 2 maal doorlopen. Eenmaal bij het verzenden en eenmaal bij het ontvangen. Waar een normaal pakket vertrekt bij de verzendende pc en aankomt bij de ontvangende computer. Vertrekt een VOIP pakket bij de beller en komt aan bij de gebelde.
+Een pakket zal van start tot einde van zijn tocht elke laag 2 maal doorlopen. Eenmaal bij het verzenden en eenmaal bij het ontvangen. Waar een normaal pakket vertrekt bij de verzendende pc en aankomt bij de ontvangende computer. Vertrekt een VOIP pakket bij de beller en komt aan bij de gebelde.\\
 Het Pakket vertrekt bij de applicatielaag en elke laag dat het doorloopt krijgt het meer informatie en veranderd het van formaat. Eens het bij de onderste laag komt(Netwerk interface) dan wordt het verstuurd over het netwerk. Eens aangekomen bij de applicatielaag van de gebelde, wordt het omgezet naar een hoorbaar formaat.
-\\
+\newpage
 Natuurlijk zijn er verschillen tussen het normale dataverkeer en VOIP verkeer. In de bovenste laag(Applicatie laag) maakt VOIP gebruik van 3 protocollen:
 
 \begin{itemize}
@@ -269,10 +269,10 @@ Daarom is er dus gekozen voor UDP.
 
 
 \begin{figure}[h]
-\caption{Het OSI model naast het TCP/IP model.}
-\includegraphics[scale=0.8]{img/TCP}
+\caption{Het OSI model naast het TCP/IP model.\protect \footnotemark}
+\includegraphics[scale=0.5]{img/TCP}
 \end{figure}
-
+\footnotetext{afbeelding uit: OSI:the internet that wasn't - Andrew L. Russell}
 
 \newpage
 
@@ -290,28 +290,31 @@ Nu ga ik dit alles opsplitsen in 3 categorieën.
 
 \subsection{Samenwerking met andere Technologieën}
 
-	\paragraph Kan VOIP ervoor zorgen dat de werking van je netwerk in het gedrang komt? Dan denk ik niet aan inbreuken via de VOIP maar eerder of de benodigdheden voor VOIP en de netwerklast die dit veroorzaakt problemen geeft voor de andere zaken die gebruik maken van het netwerk. Uiteraard is er ook de mogelijke last voor VOIP als het zich op een netwerk bevind met een reeds bestaande hoge netwerklast. Hoe zal VOIP werken in zo'n omgeving.
+Kan VOIP ervoor zorgen dat de werking van je netwerk in het gedrang komt? Dan denk ik niet aan inbreuken via de VOIP maar eerder of de benodigdheden voor VOIP en de netwerklast die dit veroorzaakt problemen geeft voor de andere zaken die gebruik maken van het netwerk. Uiteraard is er ook de mogelijke last voor VOIP als het zich op een netwerk bevind met een reeds bestaande hoge netwerklast. Hoe zal VOIP werken in zo'n omgeving.
 
 \subsection{Beveiligingsdreigingen}
 Hier ga ik opsommen wat de voornaamste dreigingen zijn op het gebied van beveiliging van VOIP systemen. Je hebt dreigingen gericht naar het verkrijgen van informatie, het voordoen als iemand anders en het verstoren van gesprekken. 
-
-	\paragraph Met behulp van packet sniffing software kan je de packetten van VOIP bekijken. Dit geeft je informatie over welk nummer op welk IP-address belt naar welk nummer. Deze informatie kan misbruikt worden. Door middel van bijvoorbeeld VOMIT,voice over misconfigured internet telephones, kan je de datastream van VOIP gesprekken omzetten naar een beluisterbaar formaat. 			Op deze manier kan je gesprek letterlijk worden afgeluisterd. Alle gevoelige informatie is dan dus niet meer veilig.
-
-	\paragraph Zoals vroeger met traditionele telefonie is er bij VOIP ook altijd belang naar het verkrijgen van gratis telefonie. Men noemt dit phreaking. Hierbij gaat een fout individu trachten toegang te krijgen tot je VOIP netwerk. Op deze manier gaat deze persoon dan kunnen bellen op kosten van de eigenaar. Hij gaat dit trachten te doen door de authenticatiegegevens van een VOIP 			gebruikter te verkrijgen.
-
-	\paragraph Indien je je netwerk veiliger maakte met de implementatie van een aparte vlan voor je VOIP telefonie is er de kans dat een individu gaat trachten toegang te krijgen tot je telefonie vlan door middel van VLAN hopping. 
-
-	\paragraph Er zou iemand kunnen proberen om de gesprekken te verstoren. Dit is mogelijk door geluid pakketen te injecteren in de communicatie stream. Op deze manier kan de kwaliteit van een gesprek enorm verminderen, de twee sprekers kunnen zelf voor langere periodes stilte horen.
-
-	\paragraph VOIP telefoons zijn zoals computers ook toestellen op je netwerk. Dit laat hen kwetsbaar voor een DOS aanval. Op deze manier kan iemand de telefoon spammen met onnodig veel SIP calls. Hierdoor wordt het toestel overbelast en kan het niet meer bellen of gebelt worden.
-
-	\paragraph Waar traditionele telefoons een nummer hebben hebben VOIP telefoons een IP address. Traditionele telefoons krijgen soms reclame oproepen. Bij VOIP oproepen is het mogelijk om via scripts naar enorme hoeveelheden IP addressen reclame boodschappen te sturen. Degene toe terecht  komen bij toestellen zouden voor de zender voordelig zijn maar niet voor de eigenaar 			van dat toestel. Deze manier van reclame spamming noemt SPIT(Spamming over Internet Telephony).
+\\ \\
+Met behulp van packet sniffing software kan je de packetten van VOIP bekijken. Dit geeft je informatie over welk nummer op welk IP-address belt naar welk nummer. Deze informatie kan misbruikt worden. Door middel van bijvoorbeeld VOMIT,voice over misconfigured internet telephones, kan je de datastream van VOIP gesprekken omzetten naar een beluisterbaar formaat. 	Op deze manier kan je gesprek letterlijk worden afgeluisterd. Alle gevoelige informatie is dan dus niet meer veilig.
+\\ \\
+Zoals vroeger met traditionele telefonie is er bij VOIP ook altijd belang naar het verkrijgen van gratis telefonie. Men noemt dit phreaking. Hierbij gaat een fout individu trachten toegang te krijgen tot je VOIP netwerk. Op deze manier gaat deze persoon dan kunnen bellen op kosten van de eigenaar. Hij gaat dit trachten te doen door de authenticatiegegevens van een VOIP 		gebruikter te verkrijgen.
+\\ \\
+ Indien je je netwerk veiliger maakte met de implementatie van een aparte vlan voor je VOIP telefonie is er de kans dat een individu gaat trachten toegang te krijgen tot je telefonie vlan door middel van VLAN hopping. 
+\\ \\
+ Er zou iemand kunnen proberen om de gesprekken te verstoren. Dit is mogelijk door geluid pakketen te injecteren in de communicatie stream. Op deze manier kan de kwaliteit van een gesprek enorm verminderen, de twee sprekers kunnen zelf voor langere periodes stilte horen.
+\\ \\
+VOIP telefoons zijn zoals computers ook toestellen op je netwerk. Dit laat hen kwetsbaar voor een DOS aanval. Op deze manier kan iemand de telefoon spammen met onnodig veel SIP calls. Hierdoor wordt het toestel overbelast en kan het niet meer bellen of gebelt worden.
+\\ \\
+Waar traditionele telefoons een nummer hebben hebben VOIP telefoons een IP address. Traditionele telefoons krijgen soms reclame oproepen. Bij VOIP oproepen is het mogelijk om via scripts naar enorme hoeveelheden IP addressen reclame boodschappen te sturen. Degene die terecht  komen bij toestellen zouden voor de zender voordelig zijn maar niet voor de eigenaar van dat toestel. Deze manier van reclame spamming noemt SPIT(Spamming over Internet Telephony).
 
  
 \subsection{VOIP met IPV6}
 	
-	\paragraph Nu het duidelijk is dat we op het internet met een enorm tekort zitten aan publieke IP adressen is het dan ook geen verrassing dat er een nieuw internet protocol aankomt. Dit nieuwe protocol komt in de vorm van IPv6(Internet Protocol Versie 6). Elke overstap naar een nieuw protocol, van welke aard dan ook, brengt veranderingen met zich mee. Het zorgt voor vernieuwing 		maar het zorgt er ook voor dat je als gebruiker je netwerkinfrastructuur moet aanpassen zodat het met dit nieuwe protocol kan werken. \\
-	Het is dan ook logisch dat we ons moeten afvragen wat de impact zal zijn van IPv6 op ons netwerk. En in het bijzonder de invloed op VOIP binnen ons netwerk? In dit deel zal ik onderzoeken wat de voordelen zijn voor VOIP en hoe we ons zullen moeten aanpassen om VOIP te laten werken met IPv6.
+ Nu het duidelijk is dat we op het internet met een enorm tekort zitten aan publieke IP adressen, is het dan ook geen verrassing dat er een nieuw internet protocol aankomt. Dit nieuwe protocol komt in de vorm van IPv6(Internet Protocol Versie 6). \\
+Elke overstap naar een nieuw protocol, van welke aard dan ook, brengt veranderingen met zich mee. Het zorgt voor vernieuwing maar het zorgt er ook voor dat je als gebruiker je netwerkinfrastructuur moet aanpassen zodat het met dit nieuwe protocol kan werken. 
+\\ \\
+Het is dan ook logisch dat we ons moeten afvragen wat de impact zal zijn van IPv6 op ons netwerk. En in het bijzonder de invloed op VOIP binnen ons netwerk? In dit deel zal ik onderzoeken wat de voordelen zijn voor VOIP en hoe we ons zullen moeten aanpassen om VOIP te laten werken met IPv6.
+\newpage
 
 % TODO: Wees zo concreet mogelijk bij het formuleren van je
 % onderzoeksvra(a)g(en). Een onderzoeksvraag is trouwens iets waar nog
@@ -320,10 +323,11 @@ Hier ga ik opsommen wat de voornaamste dreigingen zijn op het gebied van beveili
 \chapter{Methodologie}
 \label{ch:methodologie}
 
-\paragraph Voor ik startte met mijn stage en mijn bachelor proef, was mijn kennis over VOIP vrij miniem. Ik wist in grote lijnen wat het deed maar niet zozeer hoe het dat deed. Mijn eerste stap naar het oplossen van mijn vragen was eenvoudig. Mijn stageliep ik aan het bedrijf SmartTelecom NV. Dit bedrijf is een provider van onder andere VOIP systemen. Door mee te lopen met mijn stagementor Krist Vanneste kreeg ik als het ware een spoedcursus over VOIP. De eerste weken leerde ik hoe VOIP werkte en waar je op moest letten. We startte bij aan de basis met telefoons en werkten stap voor stap op naar centrales en hele netwerken. Ik hielp onder andere met het implementeren van VOIP in zowel bestaande als nieuwe netwerken. Op deze manier kwam ik veel te weten over de praktijk van de zaak.een voorbeeld hiervan is dat bestaande netwerken soms niet optimaal zijn opgebouwd. Deze werken dan wel voor de basis toepassingen maar eens je er VOIP bij implementeerd zijn er problemen. 
-\paragraph De tweede fase van mijn onderzoek was mijn bevindingen te gaan staven. Ik had ideeën over hoe VOIP in elkaar zit en waar je op moet letten bij het implementeren. Maar alvorens ik mijn bachelorproef kon beginnen schrijven moest ik uiteraard zorgen dat deze kennis correct was. Ik ben daarvoor aan het opzoeken geslaan. Ik ben beginnen opzoeken hoe VOIP werkt en wat experts zeggen dat de aandachtspunten zijn bij het opzetten van VOIP. Ik was dan ook zeer tevreden wanneer ik dit las en doorhad dat dit perfect aansloot met mijn eigen reeds vergaarde kennis.
-
-\paragraph Waar ik bij het eerste en 2e deel de stage en opzoekwerk gesplitst deed deed ik bij mijn derde fase dit niet. In deze fase ging ik opzoek naar methoden om VOIP te misbruiken of om dit te dwarsbomen. Ik onderzocht hoe dit kon en hoe ik me ertegen kan beveiligen. Vervolgens ging ik dit controleren en implementeren bij een iets grotere klant. Deze klant is een bedrijvencentrum met vele verschillende partijen die toegang hebben tot het netwerk. Een zeer goede beveiliging was hier nodig en dit liet me toe om deze beveiligingen zelf te implementeren en te documenteren.
+Voor ik startte met mijn stage en mijn bachelor proef, was mijn kennis over VOIP vrij miniem. Ik wist in grote lijnen wat het deed maar niet zozeer hoe het dat deed. Mijn eerste stap naar het oplossen van mijn vragen was eenvoudig. Mijn stageliep ik aan het bedrijf SmartTelecom NV. Dit bedrijf is een provider van onder andere VOIP systemen. Door mee te lopen met mijn stagementor Krist Vanneste kreeg ik als het ware een spoedcursus over VOIP. De eerste weken leerde ik hoe VOIP werkte en waar je op moest letten. We startte bij aan de basis met telefoons en werkten stap voor stap op naar centrales en hele netwerken. Ik hielp onder andere met het implementeren van VOIP in zowel bestaande als nieuwe netwerken. Op deze manier kwam ik veel te weten over de praktijk van de zaak.een voorbeeld hiervan is dat bestaande netwerken soms niet optimaal zijn opgebouwd. Deze werken dan wel voor de basis toepassingen maar eens je er VOIP bij implementeerd zijn er problemen. 
+\\ \\
+De tweede fase van mijn onderzoek was mijn bevindingen te gaan staven. Ik had ideeën over hoe VOIP in elkaar zit en waar je op moet letten bij het implementeren. Maar alvorens ik mijn bachelorproef kon beginnen schrijven moest ik uiteraard zorgen dat deze kennis correct was. Ik ben daarvoor aan het opzoeken geslaan. Ik ben beginnen opzoeken hoe VOIP werkt en wat experts zeggen dat de aandachtspunten zijn bij het opzetten van VOIP. Ik was dan ook zeer tevreden wanneer ik dit las en doorhad dat dit perfect aansloot met mijn eigen reeds vergaarde kennis.
+\\ \\
+Waar ik bij het eerste en 2e deel de stage en opzoekwerk gesplitst deed deed ik bij mijn derde fase dit niet. In deze fase ging ik opzoek naar methoden om VOIP te misbruiken of om dit te dwarsbomen. Ik onderzocht hoe dit kon en hoe ik me ertegen kan beveiligen. Vervolgens ging ik dit controleren en implementeren bij een iets grotere klant. Deze klant is een bedrijvencentrum met vele verschillende partijen die toegang hebben tot het netwerk. Een zeer goede beveiliging was hier nodig en dit liet me toe om deze beveiligingen zelf te implementeren en te documenteren.
 \newpage
 
 
@@ -348,7 +352,9 @@ Als we een netwerk gaan analyseren kijken we naar het volgende.
 	\item Packetloss: Soms komen bepaalde pakketten niet aan op hun bestemming. Dan spreken we van Packet Loss. Voor VOIP kan je  maximum 1\% verlies toestaan bij WAN en slechts 0.05\% bij LAN. Packet loss zorgt ondermeer voor een hogere Jitter, wat dan weer voor slechte QOS zorgt. 
 \end{itemize}
 Als een van deze waarden hun grens overschrijdt dan zal de kwaliteit van het gesprek enorm achteruitgaan. Er moet dus gezorgd worden dat het netwerk snel genoeg is en dat het goed is opgebouwd. Zodat het VOIP aankan. \\ \\
-Vervolgens wordt duidelijk hoe VOIP andere technologieën kan tegenwerken en ongekeerd. Als je in je netwerk gebruikmaakt van zaken die zelf ook veel bandwidth gebruiken, dan kan een veeleisend VOIP met deze technologieën gaan vechten. Op deze manier leiden beide hieronder en gaan de werking van beiden achteruit. In het geval dat je netwerk problemen heeft met de hoge netwerklast door VOIP en andere zaken, dan heb je uiteraard enkele mogelijkheden. Allereerst is het aangeraden op te gaan uitzoeken wat het exact is dat deze hoge netwerklast veroorzaakt. En als het kan verholpen worden dan is het probleem opgelost. Zoniet dan moeten we een oplossing zoeken voor het probleem.  Het meest voor de hand liggende is het upgraden van je netwerkapparatuur zodat deze de last aankan. Soms is het wel eens dat de apparatuur goed is maar er gewoon een uitzonderlijke hoge netwerklast is. In dit geval kan je gaan prioriteren. Op het niveau van je router heb je te optie op QOS instellingen toe te voegen. Je kan verkeer gaan prioriteren.Je kan priotiseren op basis van de ethernetpoort, mac adress of poortnummer. De meest handige hiervan is prioritiseren op basis van de poort. Hier kan je dan eenvoudig weg het UDP verkeer voorang geven op het andere verkeer.\\
+Vervolgens wordt duidelijk hoe VOIP andere technologieën kan tegenwerken en ongekeerd. Als je in je netwerk gebruikmaakt van zaken die zelf ook veel bandwidth gebruiken, dan kan een veeleisend VOIP met deze technologieën gaan vechten. Op deze manier leiden beide hieronder en gaan de werking van beiden achteruit. In het geval dat je netwerk problemen heeft met de hoge netwerklast door VOIP en andere zaken, dan heb je uiteraard enkele mogelijkheden. 
+\\ \\
+Allereerst is het aangeraden op te gaan uitzoeken wat het exact is dat deze hoge netwerklast veroorzaakt. En als het kan verholpen worden dan is het probleem opgelost. Zoniet dan moeten we een oplossing zoeken voor het probleem.  Het meest voor de hand liggende is het upgraden van je netwerkapparatuur zodat deze de last aankan. Soms is het wel eens dat de apparatuur goed is maar er gewoon een uitzonderlijke hoge netwerklast is. In dit geval kan je gaan prioriteren. Op het niveau van je router heb je te optie op QOS instellingen toe te voegen. Je kan verkeer gaan prioriteren.Je kan priotiseren op basis van de ethernetpoort, mac adress of poortnummer. De meest handige hiervan is prioritiseren op basis van de poort. Hier kan je dan eenvoudig weg het UDP verkeer voorang geven op het andere verkeer.\\ \\
 Dit is niet uiteraard niet Ideaal. Niet enkel VOIP maakt gebruik van UDP. Daarom heb je ook nog de optie op te prioriteren op basis van VLAN. Je splits het VOIP verkeer op in een apparte VLAN. En vervolgens geef je deze een hogere prioriteit dan het normale verkeer. Op deze manier zal het VOIP verkeer nooit leiden onder de hoge netwerklast opdat zijn pakketten voorang krijgen op dat van het gewone dataverkeer.
 
 
@@ -407,7 +413,7 @@ Maar hoe gaat het nu net in zijn werk. SRTP gaat het normale RTP pakket nemen en
 \newpage
 
 \begin{figure}[H]
-\caption{Voorbeeld van VLAN membership in een eenvoudig netwerk \protect \footnotemark}
+\caption{Voorbeeld van een SRTP pakket \protect \footnotemark}
 \includegraphics[scale=0.8]{img/SRTP}
 \end{figure}
 \footnotetext{Uit document IETF: RFC 3711 - Section 3.1}
@@ -430,7 +436,7 @@ Als we uiteindelijk de voor en nadelen van deze techniek op een lijstje zetten d
 
 \newpage
 \section{Identiteits dreigingen}
-Bij dreigingen voor de identiteit denk je direct aan iemand die zich voordoet als een ander op het VOIP netwerk. Zo is er bijvoorbeeld je voordoen als een ander bij het bellen, maar ook telefoons naar jou laten komen terwijl die helemaal niet voor jou bedoeld zijn. Gesprekken tussen 2 personen kan ook gecontroleerd worden door een 3e persoon die zich verborgen houd en alle gesproken informatie opslaat. Dus met dit soort dreigingen doel ik op wanneer iemand zich voordoet als iemand anders om zo aan informatie te geraken.
+Bij dreigingen voor de identiteit denk je direct aan iemand die zich voordoet als een ander op het VOIP netwerk. Zo is er bijvoorbeeld je voordoen als een ander bij het bellen, maar ook telefoons naar jou laten komen terwijl die helemaal niet voor jou bedoeld zijn. Gesprekken tussen 2 personen kan ook gecontroleerd worden door een 3e persoon die zich verborgen houd en alle gesproken informatie opslaat. Dus met dit soort dreigingen doel ik op wanneer iemand zich voordoet als iemand anders om zo aan informatie te geraken. Ook is er de dreiging dat een aanvaller via het VOIP netwerk zal kunnen bellen naar nummer die hij wil. Hij kan dit zelf dien naar betalende diensten. Met dat de kosten hiervoor soms heel snel kunnen oplopen is dit iets waar aandacht aan moet worden besteed. 
 
 \subsection{Caller-ID spoofing}
 Neen dit is geen proef over informatica recht, nochtans is het aannemen van een andere identiteits bij VOIP gesprekken makkelijker dan bij traditionele telefonie. In het geval van een normaal gesprek gebeurt er het volgende. Het gesprek tussen 2 toestellen verloopt via een server bij de VOIP provider of intern via de PBX centrale. In het pakket dat de gebelde ontvangt staat onder andere het server adres, de bestemmeling en de afzender. Caller-ID gaat out van wie de afzender is door wat er in dit pakket staat en dit pakket is opgebouwd door de server via wie het gesprek verloopt.\\
@@ -449,7 +455,7 @@ Deze techniek kan enkel werken als je pakketten kan afluisteren. Dus als je een 
 De tweede vorm van hijacking is uitgebreider. Hier trachten ervoor te zorgen dat een gesprek niet verloopt via de normale centrale of proxy, maar via een proxy die jezelf beheert. Om dit te berijken gaat hij beide partijen laten denken dat hij de andere persoon is, en vervolgens stuurt hij de pakketten door naar de bestemde. Zo weten de beller en ontvanger niets maar heeft hij wel volledige controle over het gesprek en de informatie die erin wordt uitgewisseld.\\
 Aanschouw volgende opstelling in een voorbeeld netwerk.
 \begin{figure}[H]
-\caption{Voorbeeld van VLAN membership in een eenvoudig netwerk \protect \footnotemark}
+\caption{Layout van een eenvoudig VOIP netwerk \protect \footnotemark}
 \includegraphics[scale=0.7]{img/Hijack}
 \end{figure}
 \footnotetext{Afbeelding gemaake met Cisco Packet Tracer}
@@ -468,27 +474,69 @@ Vervolgens heeft de hijacker volledige controle over niet alleen het gesprek, ma
 Om dit te bekomen is het opnieuw nodig om pakketten te kunnen afluisteren. Als je dit wegneemt dan weet de hijack proxy nooit dat er een uitnodiging om te bellen is verstuurd. En dan kan hij daar ook niet op handelen.
 
 \subsection{Besluit}
-Ondanks dat er verschillende manieren zijn waarop dat je gesprek kan worden gemanipuleerd zodat je niet direct of helemaal niet naar de bestemmeling gaat, is het vrij eenvoudig om je netwerk er tegen te beveiligen. Het enige waar we ons niet tegen kunnen beveiligen is caller-ID spoofing. Uiteindelijk is de beste raad hiervoor om caller-ID niet te vertrouwen. En als er kritieke informatie zal worden gecommuniceerd zorg dan dat je weet dat je correct verbonden bent. 
+Ondanks dat er verschillende manieren zijn waarop dat je gesprek kan worden gemanipuleerd zodat je niet direct of helemaal niet naar de bestemmeling gaat, is het vrij eenvoudig om je netwerk er tegen te beveiligen. Het enige waar we ons niet tegen kunnen beveiligen is caller-ID spoofing. Uiteindelijk is de beste raad hiervoor om caller-ID niet te vertrouwen. En als er kritieke informatie zal worden gecommuniceerd zorg dan dat je weet dat je correct verbonden bent en wie je juist aan de lijn hebt. 
 \newpage
 
 \section{Kwaliteits dreigingen}
 Met dreigingen voor de kwaliteit bedoel ik de kwaliteit van de gegevens stream en van het gesprek. Doordat VOIP gebruik maakt van het netwerk, is het ook blootgesteld aan de dreigingen die een normaal dataverkeer heeft. Er zijn methoden waarop een gegevens stroom  kan worden aangevallen met als doel om verstoren te verstoren of te onderbreken. De methode waar iedereen van weet is de Denial Of Service(DOS). Ook is er DDOS\footnote{Distributed Denial Of Service: een DOS aanval op een doelwit vanop meerdere computers} maar dit heeft uiteindelijk het zelfde effect. Waar een DOS aanval op een normale dataverkeer deze kan vertragen of verstoren, is een aanval op een VOIP stream zeer snel zeer effectief. 
-\\ \\
+
+\subsection{Start van gesprek verstoren}
 Zoals eerder al vermeld wordt een gesprek gestart met een uitnodiging\footnote{Dit is een sip pakket met de benodigde gegevens} van de beller. Als de ontvanger dit krijgt en de oproep aanvaard zal hij een bevestiging's pakket sturen naar de beller. Een persoon die een DOS aanval wil uitvoeren kan in dit geval de ontvanger bestoken met een heleboel van die uitnodiging's pakketten. Op deze manier krijgt de ontvanger zo'n grote hoeveelheid pakketten binnen dat hij deze nietmeer kan afhandelen. En de echte uitnodiging van de beller gaat dan verloren. Op deze manier kan een individue ervoor zorgen dat een persoon geen inkomende telefoons meer kan ontvangen.
-\\ \\
+
+\subsection{Start van gesprek annuleren}
 Om dit effect te verkrijgen is er nog een andere methode. Indien de ontvanger een oproep niet aanvaard dan wordt er een annulatie pakket verstuurd. Nu kan een aanvallend individue deze annulatie pakketten versturen in naam van de ontvanger. Zo lijkt het voor de beller alsof zijn oproep niet beantwoord wordt. Waar de eerste methode in principe kan bij versleutelde pakketten kan dat hier niet. Om dit type DOS aanval te kunnen uitvoeren moet je pakketten kunnen lezen.
-\\ \\
+
+\subsection{Gesprek Neerhalen}
 Deze 2 methoden zorgen ervoor dat een gesprek nooit tot stand komt. Nu zijn er ook mogelijkheden om een bestaand gesprek te beëindigen. Wanneer een van de 2 bellers de oproep beëindigd wordt er een vaarwel pakket gestuurd. Zo weet de andere partij dat het gesprek gedaan is. Wanneer onze aanvaller dit pakket stuurt in naam van een van de 2 bellers, dan wordt het gesprek beëindigd alsof dat de bedoeling was. Dit is opnieuw niet mogelijk als er encryptie is toegepast op het VOIP verkeer.
-\\ \\
-Een laatste manier om een bestaand gesprek te beëindigen is als volgt. De gegevens stroom van een voip gesprek bestaat uit RTP pakketten. Wanneer een aanvallend persoon een enorme hoeveelheid van deze pakketten stuurt naar een van de bellers, dan kan het zijn dat zijn toestel deze niet allemaal kan afhandelen. Dit zal leiden tot een slechte kwaliteit van het gesprek en uiteindelijk kan dit zelf leiden tot het beëindigen van het gesprek. Net zoals de eerste methode is deze mogelijk met of zonder encryptie. De enige maatregel die je kan nemen hiertegen is het splitsen van je normaal verkeer en je VOIP verkeer. 
+
+\subsection{RTP packet overload}
+Een laatste manier om een bestaand gesprek te beëindigen is als volgt. De gegevens stroom van een voip gesprek bestaat uit RTP pakketten. Wanneer een aanvallend persoon een enorme hoeveelheid van deze pakketten stuurt naar een van de bellers, dan kan het zijn dat zijn toestel deze niet allemaal kan afhandelen. Dit zal leiden tot een slechte kwaliteit van het gesprek en uiteindelijk kan dit zelf leiden tot het beëindigen van het gesprek. Net zoals de eerste methode is deze mogelijk met of zonder encryptie. De enige maatregel die je kan nemen hiertegen is het splitsen van je normaal verkeer en je VOIP verkeer.
+
+\subsection{Firewall misconfiguration}
+Een tool om je netwerk te regelen en beveiligen is natuurlijk de firewall. Deze laat toegestaan verkeer door en blokkeert de andere. Protocollen gebruiken elk verschillende poorten. HTTP gebruikt bijvoorbeeld poort 80. Een populaire instelling van de firewall is alle verkeer te blokkeren tenzij het op zijn lijst van toegestane poorten staat. Hetgeen VOIP verbindingen tot stand brengt is SIP en dit gaat over de poort 5060 over zowel TCP als UDP. RTP is zoals eerder vermeld enkel UDP. De poorten van RTP zijn afhankelijk van systeem tot systeem. Voor elke sessie of gesprek wordt er door een aantal poorten afgesproken tussen de partijen. 2 gesprekken die gelijktijdig actief zijn, gaan dus niet over dezelfde poort. Dit zorgt ervoor dat er een groot aantal poorten moet geopend worden voor UDP verkeer. Als SIP en/of TRP poorten niet of maar gedeeltelijk geopend zijn dan zal de firewall gesprekken blokkeren. Dit is geen dreiging in de zin van een aanval, maar hier moet wel rekening met gehouden worden. Incorrecte instellingen van de firewall kunnen VOIP verkeer dus verstoren of zelf helemaak blokkeren.
 
 
 \section{Voorbeeld Netwerk}
+In dit laatste deel over dreigingen ga ik een voorbeeldnetwerk uitwerken. Hier toon ik hoe de VOIP goed beveiligd is voor alle betrokken partijen. Dit zonder in te boeten aan funtionaliteit.
+\newpage
+\subsection{De opgave}
+Het voorbeeldbedrijf is een bedrijvencentrum. Dit bevat naast de werknemers van het centrum zelf ongeveer een 40 verschillende bedrijven in hun eigen kantoor. Elk kantoor is voorzien van internet en VOIP telefonie. Het doel is te zorgen dat de verschillende bedrijven afgeschermd zijn alsof ze hun eigen netwerk hebben, en ervoor te zorgen dat er geen verbinding is tussen het normale netwerkverkeer van deze bedrijven en het VOIP verkeer. De VOIP telefoons die bij de verschillende bedrijven staan hebben nog steeds de optie op elkaar te bellen met de interne nummer ongeacht in welk bedrijf ze zich bevinden. Daarbovenop komt nog dat bedrijven in dit centrum kunnen kiezen voor enkel internet of enkel telefonie. Een bedrijf met enkel telefonie zal dus geen internet mogen ontvangen door zich te verbinden met de telefoons.
+
+\subsection{Uitwerking}
+De eerste stap die ik onderneem is het opsplitsen van de netwerken van elkaar. Om dit te bekomen is de beste optie het implementeren van VLAN's. We maken voor elk bedrijf een apparte VLAN en we stellen onze netwerkapparatuur zo in dat er geen verbinding mogelijk is tussen de verschillende VLAN's. Vervolgens moeten we het normale verkeer splitsen van het VOIP verkeer.
+We maken opnieuw een VLAN aan maar deze keer specifiek voor VOIP. Alle telefoons, ongeacht hun locatie of horende bij welk bedrijf, zullen worden verbonden met deze VLAN.
+\\ \\
+We willen ervoor zorgen dat de kabels voor telefonie niet kunnen gebruikt worden door computers om op deze manier toegang te krijgen tot het netwerk. Hiervoor zeg ik dat toegang tot de VOIP VLAN enkel tagged toegelaten is. Apparatuur verbonden met deze kabel moet dus de juiste VLAN tag meesturen of hij zal niet toegelaten worden. Als een bedrijf naast telefonie ook internet heeft dan wordt op die kabel van dat toestel ook de VLAN van dat bedrijf toegelaten. Dit is untagged. Op deze manier zorgen we ervoor dat enkel een telefoon die juist ingesteld is toegang zal krijgen tot de VOIP VLAN en het bijhorende verkeer.  Om de beveiliging van de VLAN's te garanderen zorgen we ervoor dat deze beveiligd zijn tegen VLAN hopping. 
+\\ \\
+In theorie is dit voldoende om het bedrijvencentrum zijn VOIP te beveiligen. Indien een individue toch toegang zou krijgen tot de VOIP VLAN, dan is er een probleem. Om dit tegen te gaan zullen we ervoor zorgen dat de pakketten van VOIP geëncrypteerd zijn. Hierdoor kan een aanvallend Individue niet zien wat er in deze pakketten staat. En zo kan hij deze informatie ook niet gebruiken om het VOIP netwerk te manipuleren.
+\newpage
+Deze beveiligingen zijn voor dreigingen die komen van binnenuit. Als iemand van buiten het netwerk een aanval wil lanceren dan moet deze eerst toegang krijgen tot het netwerk zelf. Om dit tegen te gaan zorgen we voor een goeie firewall op router niveau zodat enkel het toegelaten verkeer binnenmag. Bij het instellen van deze firewall zorgen we zeker dat de benodigde poorten voor SIP en RTP intern zeker toegelaten zijn. En dat er verbinding kan gemaakt worden met de VOIP providers. Zelf al bevind er zich een centrale op locatie van het bedrijf zelf, dan nog moet deze verbinding kunnen maken met de provider die de calls afhandeld.
+ \\ \\
+Uiteindelijk zijn er verschillende methoden om toegang te verkrijgen tot netwerken van buitenaf. Hier ga ik niet verder op in aangezien dit een geheel ander onderwerp is en zijn eigen bachlorproef verdiend. In het kader van de bachlor proeven aan de Hogent is er minstens 1 proef met als onderwerp algemene netwerkbeveiliging,moest u hierin geïntereseerd zijn dan raad ik deze aan.
+
 
 \chapter{VOIP met IPV6}
 \label{ch:VOIP met IPV6}
+Zoals vermeld in de inleiding moeten we rekening houden met het opkomende IPv6. Deze nieuwe versie van het huidige IPv4, heeft enkele veranderingen in petto op het gebied van hoe het werkt. Maar hoe kan IPv6 nu een voordeel zijn voor VOIP?\\
+IPV6 heeft een ander soort header(gedeelte met informatie over het pakket) dan IPv4. Waar IPv4 een gebrek had aan beveiliging en QOS(Quality Of Service). Zorgt de nieuwe header in IPv6 wel voor mogelijkheden. Op het gebied van beveiliging maakt het ontwikkeling van beveiligingsprotocollen en applicaties makkelijker. Maar waar wij vooral naar kijken is de QOS. De IPv6 header bevat een Traffic Class. De bedoeling is dat deze zal werken als een soort van label in type pakket of prioriteit. Waar er bij IPv4 gebruik werd van een extra architectuur genaamd "differentiated service", zou deze functionaliteit dus bij IPv6 standaard in de header zitten.\\
+Elke manier die QOS verzekerd is een goeie zet als het op VOIP aankomt. Met dat QOS een van de belangrijkste aandachtpunten is bij VOIP, kunnen we stellen dat er vanuit de VOIP wereld met belangstelling wordt gekeken naar de vooruitgang van IPV6.
 
-
+\begin{figure}[H]
+\centering
+\begin{minipage}{.45\linewidth}
+  \includegraphics[width=\linewidth]{img/IPv4}
+  \caption{IPv4 Header}
+  \label{img1}
+\end{minipage}
+\hspace{.05\linewidth}
+\begin{minipage}{.45\linewidth}
+  \includegraphics[width=\linewidth]{img/IPv6}
+  \caption{IPv6 Header}
+  \label{img2}
+\end{minipage}
+\end{figure}
+\newpage
+Voorlopig kunnen we al stellen dat IPv6 functionaliteiten zal hebben op het gebied van beveiliging en quality of service, die IPv4 niet heeft. Echter doordat IPv4 al zo lang bestaat zijn er implementaties ontstaan die deze mogelijkheden wel hebben. IPv6 is dus zeker een volwaardige tegenstander van IPv4, maar de toekomst zal uitwijzen of het effectief beter is. 
 
 
 \chapter{Conclusie}

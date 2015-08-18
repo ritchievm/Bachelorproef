@@ -1,6 +1,6 @@
 \select@language {dutch}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Het OSI model naast het TCP/IP model.}}{7}{figure.1.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Het OSI model naast het TCP/IP model.\footnotemark }}{8}{figure.1.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -8,7 +8,9 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Details van een VOIP/SIP pakket}}{15}{figure.4.2}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Gesprek omgezet naar beluisterbaar formaat}}{15}{figure.4.3}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Voorbeeld van VLAN membership in een eenvoudig netwerk \footnotemark }}{17}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Voorbeeld van VLAN membership in een eenvoudig netwerk \footnotemark }}{19}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Voorbeeld van VLAN membership in een eenvoudig netwerk \footnotemark }}{23}{figure.4.6}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Voorbeeld van een SRTP pakket \footnotemark }}{19}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Layout van een eenvoudig VOIP netwerk \footnotemark }}{23}{figure.4.6}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces IPv4 Header}}{29}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces IPv6 Header}}{29}{figure.5.2}
 \addvspace {10\p@ }

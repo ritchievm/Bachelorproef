@@ -16,6 +16,13 @@
 \BOOKMARK [2][-]{subsection.4.2.2}{Call Hijacking}{section.4.2}% 16
 \BOOKMARK [2][-]{subsection.4.2.3}{Besluit}{section.4.2}% 17
 \BOOKMARK [1][-]{section.4.3}{Kwaliteits dreigingen}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.4}{Voorbeeld Netwerk}{chapter.4}% 19
-\BOOKMARK [0][-]{chapter.5}{VOIP met IPV6}{}% 20
-\BOOKMARK [0][-]{chapter.6}{Conclusie}{}% 21
+\BOOKMARK [2][-]{subsection.4.3.1}{Start van gesprek verstoren}{section.4.3}% 19
+\BOOKMARK [2][-]{subsection.4.3.2}{Start van gesprek annuleren}{section.4.3}% 20
+\BOOKMARK [2][-]{subsection.4.3.3}{Gesprek Neerhalen}{section.4.3}% 21
+\BOOKMARK [2][-]{subsection.4.3.4}{RTP packet overload}{section.4.3}% 22
+\BOOKMARK [2][-]{subsection.4.3.5}{Firewall misconfiguration}{section.4.3}% 23
+\BOOKMARK [1][-]{section.4.4}{Voorbeeld Netwerk}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.4.1}{De opgave}{section.4.4}% 25
+\BOOKMARK [2][-]{subsection.4.4.2}{Uitwerking}{section.4.4}% 26
+\BOOKMARK [0][-]{chapter.5}{VOIP met IPV6}{}% 27
+\BOOKMARK [0][-]{chapter.6}{Conclusie}{}% 28
