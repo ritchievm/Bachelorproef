@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.30)  18 AUG 2015 19:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.30)  19 AUG 2015 21:57
 entering extended mode
 **D:/Users/Major/Documents/Github/Bachelorproef/tin-bachproef.tex
 (D:/Users/Major/Documents/Github/Bachelorproef/tin-bachproef.tex
@@ -789,29 +789,29 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@floatcapt=\box34
 )
 (D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 121.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 122.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 122.
 
 
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 121.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 122.
 
 
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
@@ -865,7 +865,7 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \everyMPtoPDFconversion=\toks30
 )
 \AtBeginShipoutBox=\box36
-Package hyperref Info: Link coloring OFF on input line 121.
+Package hyperref Info: Link coloring OFF on input line 122.
  ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -874,9 +874,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count134
 )
-LaTeX Info: Redefining \ref on input line 121.
-LaTeX Info: Redefining \pageref on input line 121.
-LaTeX Info: Redefining \nameref on input line 121.
+LaTeX Info: Redefining \ref on input line 122.
+LaTeX Info: Redefining \pageref on input line 122.
+LaTeX Info: Redefining \nameref on input line 122.
 
 (D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.out)
 (D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.out)
@@ -914,16 +914,16 @@ LaTeX Info: Redefining \nameref on input line 121.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 131.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 132.
 
 ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<img/HG-beeldmerk-woordmerk.png, id=115, 557.2017pt x 611.4042pt>
+<img/HG-beeldmerk-woordmerk.png, id=131, 557.2017pt x 611.4042pt>
 File: img/HG-beeldmerk-woordmerk.png Graphic file (type png)
 
 <use img/HG-beeldmerk-woordmerk.png>
-Package pdftex.def Info: img/HG-beeldmerk-woordmerk.png used on input line 132.
+Package pdftex.def Info: img/HG-beeldmerk-woordmerk.png used on input line 133.
 
 (pdftex.def)             Requested size: 71.13188pt x 78.04861pt.
  [1
@@ -969,21 +969,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.177   \restoregeometry
+l.178   \restoregeometry
                          [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.189 \end{abstract}
+l.190 \end{abstract}
                      [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.200 \tableofcontents
+l.201 \tableofcontents
                        [2
 
 ]
@@ -1037,347 +1037,376 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [4]
 Hoofdstuk 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
+Underfull \hbox (badness 10000) in paragraph at lines 211--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
+Underfull \hbox (badness 10000) in paragraph at lines 211--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
+Underfull \hbox (badness 10000) in paragraph at lines 211--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
+Underfull \hbox (badness 10000) in paragraph at lines 211--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--215
+Underfull \hbox (badness 10000) in paragraph at lines 211--216
 
  []
 
 [5
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+lmss on input line 218
+LaTeX Font Info:    Try loading font information for TS1+lmss on input line 219
 .
  ("D:\Program Files (x86)\MiKTeX 2.9\tex\latex\lm\ts1lmss.fd"
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [6] [7]
-<img/TCP.jpg, id=193, 622.325pt x 425.59pt>
+<img/TCP.jpg, id=213, 622.325pt x 425.59pt>
 File: img/TCP.jpg Graphic file (type jpg)
  <use img/TCP.jpg>
-Package pdftex.def Info: img/TCP.jpg used on input line 273.
+Package pdftex.def Info: img/TCP.jpg used on input line 274.
 (pdftex.def)             Requested size: 311.16173pt x 212.79446pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 275.
+(Font)              <10> on input line 276.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 275.
+(Font)              <7> on input line 276.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 275.
+(Font)              <5> on input line 276.
  [8pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.277 \newpage
+l.278 \newpage
                <D:/Users/Major/Documents/Github/Bachelorproef/img/TCP.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 296--309
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--309
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--309
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--309
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--309
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--309
+Underfull \hbox (badness 10000) in paragraph at lines 297--300
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 313--317
+Underfull \hbox (badness 10000) in paragraph at lines 302--310
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--310
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--310
 
  []
 
 [10]
+Underfull \hbox (badness 10000) in paragraph at lines 314--318
+
+ []
+
+[11]
 Hoofdstuk 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--331
+Underfull \hbox (badness 10000) in paragraph at lines 327--332
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--331
-
- []
-
-[11
-
-]
-Hoofdstuk 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 354--359
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 354--359
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 354--359
+Underfull \hbox (badness 10000) in paragraph at lines 327--332
 
  []
 
 [12
 
-] [13]
-Hoofdstuk 4.
-[14
+]
+Hoofdstuk 3.
 
-] <img/sniffer1.png, id=228, 1445.4pt x 404.26031pt>
+Underfull \hbox (badness 10000) in paragraph at lines 355--360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--360
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 355--360
+
+ []
+
+[13
+
+] [14]
+Hoofdstuk 4.
+[15
+
+] <img/sniffer1.png, id=252, 1445.4pt x 404.26031pt>
 File: img/sniffer1.png Graphic file (type png)
  <use img/sniffer1.png>
-Package pdftex.def Info: img/sniffer1.png used on input line 378.
+Package pdftex.def Info: img/sniffer1.png used on input line 379.
 (pdftex.def)             Requested size: 433.62335pt x 121.27902pt.
 
-Overfull \hbox (15.36967pt too wide) in paragraph at lines 378--379
+Overfull \hbox (15.36967pt too wide) in paragraph at lines 379--380
 [][]
  []
 
-<img/sniffer2.png, id=229, 763.35187pt x 290.58563pt>
+<img/sniffer2.png, id=253, 763.35187pt x 290.58563pt>
 File: img/sniffer2.png Graphic file (type png)
  <use img/sniffer2.png>
-Package pdftex.def Info: img/sniffer2.png used on input line 380.
+Package pdftex.def Info: img/sniffer2.png used on input line 381.
 (pdftex.def)             Requested size: 381.675pt x 145.29245pt.
 
-<img/sniffer3.png, id=230, 800.23969pt x 340.27126pt>
+<img/sniffer3.png, id=254, 800.23969pt x 340.27126pt>
 File: img/sniffer3.png Graphic file (type png)
  <use img/sniffer3.png>
-Package pdftex.def Info: img/sniffer3.png used on input line 382.
+Package pdftex.def Info: img/sniffer3.png used on input line 383.
 (pdftex.def)             Requested size: 400.11887pt x 170.13521pt.
 
-[15pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.384 \newpage
+l.385 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {figure.4.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.384 \newpage
+l.385 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {figure.4.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.384 \newpage
+l.385 \newpage
                <D:/Users/Major/Documents/Github/Bachelorproef/img/sniffer1.png>
  <D:/Users/Major/Documents/Github/Bachelorproef/img/sniffer2.png> <D:/Users/Maj
 or/Documents/Github/Bachelorproef/img/sniffer3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 387--394
+Underfull \hbox (badness 10000) in paragraph at lines 388--395
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--394
+Underfull \hbox (badness 10000) in paragraph at lines 388--395
 
  []
 
-[16] <img/VLAN.png, id=247, 685.05937pt x 357.58594pt>
+[17] <img/VLAN.png, id=271, 685.05937pt x 357.58594pt>
 File: img/VLAN.png Graphic file (type png)
  <use img/VLAN.png>
-Package pdftex.def Info: img/VLAN.png used on input line 399.
+Package pdftex.def Info: img/VLAN.png used on input line 400.
 (pdftex.def)             Requested size: 479.53828pt x 250.30844pt.
 
-Overfull \hbox (61.2846pt too wide) in paragraph at lines 399--400
+Overfull \hbox (61.2846pt too wide) in paragraph at lines 400--401
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--406
+Underfull \hbox (badness 10000) in paragraph at lines 404--407
 
  []
 
-[17pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4
+[18pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.406 ... deze nooit de juiste tag heeft. \newpage
+l.407 ... deze nooit de juiste tag heeft. \newpage
                                                    <D:/Users/Major/Documents/Gi
 thub/Bachelorproef/img/VLAN.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 410--413
+Underfull \hbox (badness 10000) in paragraph at lines 408--411
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--413
+Underfull \hbox (badness 10000) in paragraph at lines 415--420
 
  []
 
-[18] <img/SRTP.png, id=262, 412.6617pt x 271.7352pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--420
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 422--425
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--425
+
+ []
+
+[20] <img/SRTP.png, id=290, 412.6617pt x 271.7352pt>
 File: img/SRTP.png Graphic file (type png)
  <use img/SRTP.png>
-Package pdftex.def Info: img/SRTP.png used on input line 417.
+Package pdftex.def Info: img/SRTP.png used on input line 429.
 (pdftex.def)             Requested size: 330.12979pt x 217.38843pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--424
+Underfull \hbox (badness 10000) in paragraph at lines 433--436
 
  []
 
-[19pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5
+[21pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.426 \newpage
+l.438 \newpage
                <D:/Users/Major/Documents/Github/Bachelorproef/img/SRTP.png (PNG
  copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 428--436
+Underfull \hbox (badness 10000) in paragraph at lines 440--448
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--436
+Underfull \hbox (badness 10000) in paragraph at lines 440--448
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--436
+Underfull \hbox (badness 10000) in paragraph at lines 440--448
 
  []
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 442--446
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 454--458
 
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 450--454
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 462--466
 
  []
 
-[22] <img/Hijack.png, id=287, 386.94562pt x 226.59656pt>
+[24] <img/Hijack.png, id=315, 386.94562pt x 226.59656pt>
 File: img/Hijack.png Graphic file (type png)
  <use img/Hijack.png>
-Package pdftex.def Info: img/Hijack.png used on input line 459.
+Package pdftex.def Info: img/Hijack.png used on input line 471.
 (pdftex.def)             Requested size: 270.86008pt x 158.6165pt.
 
-[23pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6
+[25pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.472 \newpage
+l.484 \newpage
                <D:/Users/Major/Documents/Github/Bachelorproef/img/Hijack.png>]
-[24] [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 506--512
+[26] [27] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 518--524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 506--512
+Underfull \hbox (badness 10000) in paragraph at lines 518--524
 
  []
 
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 513--516
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 525--528
 
  []
 
-[28]
+[30]
 Hoofdstuk 5.
-<img/IPv4.png, id=320, 360.59718pt x 243.91125pt>
+<img/IPv4.png, id=348, 360.59718pt x 243.91125pt>
 File: img/IPv4.png Graphic file (type png)
  <use img/IPv4.png>
-Package pdftex.def Info: img/IPv4.png used on input line 527.
+Package pdftex.def Info: img/IPv4.png used on input line 539.
 (pdftex.def)             Requested size: 188.21288pt x 127.30724pt.
 
-<img/IPv6.png, id=321, 360.59718pt x 243.91125pt>
+<img/IPv6.png, id=349, 360.59718pt x 243.91125pt>
 File: img/IPv6.png Graphic file (type png)
  <use img/IPv6.png>
-Package pdftex.def Info: img/IPv6.png used on input line 533.
+Package pdftex.def Info: img/IPv6.png used on input line 545.
 (pdftex.def)             Requested size: 188.21288pt x 127.30724pt.
- [29
+ [31
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.538 \newpage
+l.550 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {figure.5.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.538 \newpage
+l.550 \newpage
                <D:/Users/Major/Documents/Github/Bachelorproef/img/IPv4.png> <D:
-/Users/Major/Documents/Github/Bachelorproef/img/IPv6.png>] [30]
+/Users/Major/Documents/Github/Bachelorproef/img/IPv6.png>] [32]
 Hoofdstuk 6.
-(D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.bbl [31
 
-]
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 6.
-) [32
+Underfull \hbox (badness 10000) in paragraph at lines 562--568
 
-]
-(D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.lof)
-\tf@lof=\write5
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 562--568
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--577
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--577
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--577
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [33
 
 ]
-(D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.lot)
-\tf@lot=\write6
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 560.
- [34
+[34] (D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.bbl [35]
+
+Package natbib Warning: Empty `thebibliography' environment on input line 3.
+
+) [36
+
+] (D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.lof)
+\tf@lof=\write5
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 595.
+
+[37
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 560.
-
-(D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 560.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 560.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 595.
+ (D:\Users\Major\Documents\Github\Bachelorproef\tin-bachproef.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 595.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 595.
 Package rerunfilecheck Info: File `tin-bachproef.out' has not changed.
-(rerunfilecheck)             Checksum: DF4C4C19D33207767F95E2605C41B166;1916.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 560.
+(rerunfilecheck)             Checksum: 0FE2E0D372119DA7BED13C76CA3717F6;2218.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 595.
  ) 
 Here is how much of TeX's memory you used:
- 10145 strings out of 493921
- 143015 string characters out of 3144876
- 330289 words of memory out of 3000000
- 13137 multiletter control sequences out of 15000+200000
+ 10135 strings out of 493921
+ 142736 string characters out of 3144876
+ 330216 words of memory out of 3000000
+ 13127 multiletter control sequences out of 15000+200000
  65716 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,11n,43p,1212b,441s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,11n,43p,1212b,441s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -1397,9 +1426,9 @@ type1/public/lm/lmss10.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
 c/lm/lmss12.pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmss8.
 pfb><D:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><D:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb>
-Output written on tin-bachproef.pdf (37 pages, 773613 bytes).
+Output written on tin-bachproef.pdf (40 pages, 780117 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 94 named destinations out of 1000 (max. 500000)
- 275 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 450 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
+ 307 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,7 +10,7 @@
 \BOOKMARK [2][-]{subsection.4.1.1}{Hoe werkt het?}{section.4.1}% 10
 \BOOKMARK [2][-]{subsection.4.1.2}{Virtual LAN's}{section.4.1}% 11
 \BOOKMARK [2][-]{subsection.4.1.3}{Encryptie}{section.4.1}% 12
-\BOOKMARK [2][-]{subsection.4.1.4}{Apart netwerk}{section.4.1}% 13
+\BOOKMARK [2][-]{subsection.4.1.4}{Gescheiden netwerk}{section.4.1}% 13
 \BOOKMARK [1][-]{section.4.2}{Identiteits dreigingen}{chapter.4}% 14
 \BOOKMARK [2][-]{subsection.4.2.1}{Caller-ID spoofing}{section.4.2}% 15
 \BOOKMARK [2][-]{subsection.4.2.2}{Call Hijacking}{section.4.2}% 16
@@ -26,3 +26,7 @@
 \BOOKMARK [2][-]{subsection.4.4.2}{Uitwerking}{section.4.4}% 26
 \BOOKMARK [0][-]{chapter.5}{VOIP met IPV6}{}% 27
 \BOOKMARK [0][-]{chapter.6}{Conclusie}{}% 28
+\BOOKMARK [1][-]{section.6.1}{zijn er problemen met andere technologie\353n}{chapter.6}% 29
+\BOOKMARK [2][-]{subsection.6.1.1}{beveiligingsdreigingen}{section.6.1}% 30
+\BOOKMARK [2][-]{subsection.6.1.2}{VOIP met IPv6}{section.6.1}% 31
+\BOOKMARK [2][-]{subsection.6.1.3}{Slot}{section.6.1}% 32

@@ -42,6 +42,7 @@
 \usepackage{wrapfig}
 \usepackage{float}
 
+
 %%---------- Layout ------------------------------------------------------
 
 % hoofdingen, enz.
@@ -191,7 +192,7 @@ Deze bachlorproef draait rond voice over IP(VOIP). In deze proef stel ik mezelf 
 \chapter*{Voorwoord}
 \label{ch:voorwoord}
 Deze thesis is in het kader van mijn bachlorproef voor toegepaste informatica aan de hogeschool Gent.\\
-Het onderwerp hep ik gekozen omdat het aanleunde bij mijn stage en aangezien het een technologie is die velen kennen maar niet zozeer begrijpen of vertrouwen. 
+Het onderwerp heb ik gekozen omdat het aanleunde bij mijn stage en aangezien het een technologie is die velen kennen maar niet zozeer begrijpen of vertrouwen. 
 Ik wil mijn stagementor en copromotor Krist Vanneste van SmartTelecom NV bedanken voor de hulp en research mogelijk door hem. Door heb was ik in staat om de beveiliging van een ingewikkeld netwerk te kunnen implementeren. Dit zowel voor normaal dataverkeer als voor VOIP verkeer. Uiteindelijk is mijn onderwerk geinspireerd door deze kans van samenwerking.\\
 Ook bedank ik mijn stage partner Dries Vandooren voor de nuttige invloed tijdens de stage en in het onderwerp VOIP.
 
@@ -296,18 +297,18 @@ Kan VOIP ervoor zorgen dat de werking van je netwerk in het gedrang komt? Dan de
 Hier ga ik opsommen wat de voornaamste dreigingen zijn op het gebied van beveiliging van VOIP systemen. Je hebt dreigingen gericht naar het verkrijgen van informatie, het voordoen als iemand anders en het verstoren van gesprekken. 
 \\ \\
 Met behulp van packet sniffing software kan je de packetten van VOIP bekijken. Dit geeft je informatie over welk nummer op welk IP-address belt naar welk nummer. Deze informatie kan misbruikt worden. Door middel van bijvoorbeeld VOMIT,voice over misconfigured internet telephones, kan je de datastream van VOIP gesprekken omzetten naar een beluisterbaar formaat. 	Op deze manier kan je gesprek letterlijk worden afgeluisterd. Alle gevoelige informatie is dan dus niet meer veilig.
+
+\newpage
+Indien je je netwerk veiliger maakte met de implementatie van een aparte vlan voor je VOIP telefonie is er de kans dat een individu gaat trachten toegang te krijgen tot je telefonie VLAN door middel van VLAN hopping. Zo krijgt een persoon toegang tot een VLAN waar hij normaal gezien geen toegang tot heeft. En zo ook toegang tot alle andere apparaten die lid zijn van die VLAN.
+Het is duidelijk hoe dit een probleem kan zijn.
 \\ \\
-Zoals vroeger met traditionele telefonie is er bij VOIP ook altijd belang naar het verkrijgen van gratis telefonie. Men noemt dit phreaking. Hierbij gaat een fout individu trachten toegang te krijgen tot je VOIP netwerk. Op deze manier gaat deze persoon dan kunnen bellen op kosten van de eigenaar. Hij gaat dit trachten te doen door de authenticatiegegevens van een VOIP 		gebruikter te verkrijgen.
+Zoals vroeger met traditionele telefonie is er bij VOIP ook altijd belang naar het verkrijgen van gratis telefonie. Men noemt dit phreaking. Hierbij gaat een fout individu trachten toegang te krijgen tot je VOIP netwerk. Op deze manier gaat deze persoon dan kunnen bellen op kosten van de eigenaar. Hij gaat dit trachten te doen door de authenticatiegegevens van een VOIP 		gebruikter te verkrijgen. Hij kan zich niet enkel voordoen als een ligitieme gebruiker maar ook zorgen dat het VOIP netwerk denkt dat hij deze persoon is. Zo kan hij niet enkel bellen maar ook gebeld worden als deze persoon. Zo kan iemand niet alleen genieten van gratis telefonie maar krijgt hij ook toegang tot alle informatie die verstuurd wordt over dit VOIP netwerk.
 \\ \\
- Indien je je netwerk veiliger maakte met de implementatie van een aparte vlan voor je VOIP telefonie is er de kans dat een individu gaat trachten toegang te krijgen tot je telefonie vlan door middel van VLAN hopping. 
-\\ \\
- Er zou iemand kunnen proberen om de gesprekken te verstoren. Dit is mogelijk door geluid pakketen te injecteren in de communicatie stream. Op deze manier kan de kwaliteit van een gesprek enorm verminderen, de twee sprekers kunnen zelf voor langere periodes stilte horen.
-\\ \\
-VOIP telefoons zijn zoals computers ook toestellen op je netwerk. Dit laat hen kwetsbaar voor een DOS aanval. Op deze manier kan iemand de telefoon spammen met onnodig veel SIP calls. Hierdoor wordt het toestel overbelast en kan het niet meer bellen of gebelt worden.
+VOIP telefoons zijn zoals computers ook toestellen op je netwerk. Dit laat hen kwetsbaar voor een DOS aanval. Op deze manier kan iemand de telefoon spammen met onnodig veel SIP calls of rtp pakketten. Hierdoor wordt het toestel overbelast en kan het niet meer bellen of gebelt worden. Bij gesprekken die reeds opgestart zijn kan dit ervoor zorgen dat de kwaliteit van het gesprek achteruit gaat. Uiteindelijk als een van de partijen faalt om deze pakketten te verwerken dan zal het gesprek beëindigd worden.
 \\ \\
 Waar traditionele telefoons een nummer hebben hebben VOIP telefoons een IP address. Traditionele telefoons krijgen soms reclame oproepen. Bij VOIP oproepen is het mogelijk om via scripts naar enorme hoeveelheden IP addressen reclame boodschappen te sturen. Degene die terecht  komen bij toestellen zouden voor de zender voordelig zijn maar niet voor de eigenaar van dat toestel. Deze manier van reclame spamming noemt SPIT(Spamming over Internet Telephony).
 
- 
+ \newpage
 \subsection{VOIP met IPV6}
 	
  Nu het duidelijk is dat we op het internet met een enorm tekort zitten aan publieke IP adressen, is het dan ook geen verrassing dat er een nieuw internet protocol aankomt. Dit nieuwe protocol komt in de vorm van IPv6(Internet Protocol Versie 6). \\
@@ -405,6 +406,17 @@ Op deze afbeelding zie je een eenvoudig netwerk met meerdere switches waar norma
 \\
 Nu is er nog de kans dat een persoon zich verbind met de ethernet kabel van een VOIP toestel, en op die manier toegang krijgt tot de VOIP VLAN. Hiervoor bestaat er de optie om de VLAN op een poort tagged of untagged te laten verlopen. Bij untagged wordt eender welk toestel dat verbind met die poort lid van de gespecifierde VLAN en zal zijn pakketten worden doorgestuurd naar hun bestemming. Bij tagged VLAN moeten pakketten verzonden vanaf het verbonden toestel effectief de juiste VLAN tag meekrijgen. Dus elk toestel dat gebruik moet maken van de VOIP VLAN zal dus moeten ingesteld worden alvorens deze verbinding kan maken. Als een computer dan gebruik maakt van een VOIP toestel zijn kabel, dan kan deze geen verbinding maken met het VOIP netwerk aangezien deze nooit de juiste tag heeft. \newpage
 VOIP telefoons hebben vaak een interne switch. Dit laat toe dat er een ander toestel via de telefoon verbinding kan maken met het netwerk. Dit is geen probleem als we goed werken met VLAN tagging. We maken de poort lid van de VOIP VLAN maar enkel tagged. En we maken de poort ook lid van de normale VLAN maar ditmaal untagged. Op de telefoon zelf kunnen we eventueel nog instellen welke VLAN tag het 2e apparaat moet krijgen. Het toestel dat verbonden ist met de telefoon zal dan lid zijn van de normale VLAN en de telefoon van de VOIP VLAN. Zelf als de computer verbindt met de kabel bedoeld voor de telefoon, dan zal hij geen verbinding krijgen met het VLAN van VOIP. Maar wel met de normale VLAN voor het dataverkeer. 
+\\ \\
+Een VLAN is een zeer handig middel om bepaald netwerkverkeer te splitsen van ander verkeer. Nu heeft de VLAN technologie wel enkele zwakke puntjes die indien niet opgelost, kunnen zorgen dat iemand toch toegang verkrijgt tot bepaalde VLAN's. Ik ga hier kort over aangezien het niet direct onderdeel is van de dreigingen voor VOIP, maar het is wel handig te weten dat zelf VLAN's zwakke punten hebben. Er is een techniek genaamd VLAN hopping. Er zijn 2 mogelijkheden.
+\begin{itemize}
+		\item{Trunk Negotiation}
+		\item{Double Tagging}
+\end{itemize}
+Een trunk poort op een switch is een poort die VLAN informatie doorstuurt naar andere switches. Er is een protocol genaamd DTP(dynamic Trunk Protocol) dat gebruikt wordt om de trunk te onderhandelen. Iemand die een VLAN wil binnendringen, kan zich voordoen als switch en zo via auto negotiate trunk alle VLAN informatie verkrijgen. Vervolgens heeft hij de nodige informatie om lid te worden van de VLAN die hij wil binnendringen. Deze aanvalsmethode kan makkelijk onmogelijk gemaakt worden door auto negotiate af te zetten op de poorten die geen trunk mogen zijin. \\ \\
+De andere mogelijkheid is double tagging. Bij deze aanval ga je een pakket dubbel encapsuleren en zo 2 VLAN tags meegeven. De eerste tag wordt gelezen bij de eerste switch. Hier wordt het pakket doorgelaten omdat deze tag klopt en de aanvaller toegang heeft daartot. De 2e tag is van een VLAN waar de aanvaller geen toegang tot heeft. Maar nu is het pakket al voorbij de eerste switch. Vervolgens wordt het pakket doorgestuurd naar een bestemming in de doelwit VLAN. Dit lukt want de juiste tag staat in het pakket. Om dit onmogelijk te maken werk je best niet met native VLAN's en je hebt ook de optie om dubbel VLAN tagging niet toe te staan.
+\\ \\
+Er zijn nog methodes om potentieel toegang te kunnen krijgen tot een VLAN, maar deze zijn moeilijker en enkel mogelijk als er slechte instellingen zijn gebeurt op router en/of switch niveau. Zorg er voor dat alles goed is ingesteld en dat je geen instellingen vergeet. Als je dit doet dan moet iemand al veel kennis hebben van de netwerkopstelling om toegang te forceren.
+En in combinatie met het volgende punt is het nog moeilijker om enige vorm van data te onderscheppen.
 
 \subsection{Encryptie}
 In sommige gevallen is het afschijden van je VOIP telefonie niet geheel mogelijk. Er bestaat software \footnote{voorbeeld: http://www.xtelsio.com/} die het toestaat om te bellen met een VOIP toestel vanaf de computer. Op deze manier moet de gebruiker nooit nummer lezen van het scherm en intoetsen maar kan hij direct bellen. Dit is een zeer handige tool voor bijvoorbeeld onthaal bedienden. Om deze software te kunnen gebruiken moet deze computer toegang hebben tot het VOIP netwerk. Waar dit altijd zal zorgen voor een beveiligingsrisico is er niet direct een perfecte oplossing om deze computer tegen te houden om af te luisteren van gesprekken. \\ \\
@@ -424,7 +436,7 @@ Als we dit gaan samenvatten kunnen we stellen dat encryptie een zeer handige tec
 
 
 \newpage
-\subsection{Apart netwerk}
+\subsection{Gescheiden netwerk}
 Een optie die altijd op tafel ligt is ervoor zorgen dat er helemaal geen contact is tussen je VOIP verkeer en je dataverkeer. Waar we dit virtueel doen bij VLAN(enkel intern) kunnen we dit uiteraard ook fysiek doen. Er zijn bedrijven waarbij de informatie verstuurd over het VOIP gedeelte van het netwerk enorm kritiek is. Deze bedrijven kiezen er dan ook soms voor om een apart netwerk aan te leggen enkel en alleen voor hun VOIP. Dit houd in dat het aantal netwerkapparaten bijna verdubbeld. Dit betekend ook dat ze een extra internetlijn aankopen enkel en alleen voor dit VOIP netwerk. Uiteraard is dit een zeer veilige oplossing. Er is zelf geen fysiek contact tussen het normale en het VOIP verkeer. Het is dus een eenvoudige zeer effectieve oplossing. Het heeft wel enkele grote nadelen.
 \\ \\
 Ten eerste is er de enorme kost die hier aan gekoppeld is. Elk stuk netwerkapparatuur moet dubbel aangekocht worden. Daarbij komt nog de maandelijkse kost voor een extra internetlijn. Nu bij kleine bedrijven is dit niet direct een probleem. Een extra router en enkele switches plus een extra internet lijn. Hier is de kost nog vrij miniem. Het probleem is dat bij bedrijven die grote gebouwen en enorm veel werknemers hebben, dat hierbij de kost enorm oploopt.\\
@@ -546,6 +558,30 @@ Voorlopig kunnen we al stellen dat IPv6 functionaliteiten zal hebben op het gebi
 % onderzoeksvra(a)g(en). Reflecteer kritisch over het resultaat. Zijn er
 % zaken die nog niet duidelijk zijn? Heeft het ondezoek geleid tot nieuwe
 % vragen die uitnodigen tot verder onderzoek?
+\section{zijn er problemen met andere technologieën}
+VOIP is een combinatie van protocollen. Het maakt gebruik van SIP om sessies tot stand te brengen en om gebruikers te authenticeren. De gegevensstroom verloopt via RTP wat dan weer gebruik kan maken van SRTP voor encryptie. Uiteindelijk is het dataverkeer van VOIP vrij gelijkaardig aan dat van normaal netwerkverkeer. In theorie zorgt het dus niet voor problemen.
+\\ \\
+Tijdens de research fase en stage heb ik zeer vaak voip geïmplementeerd. Dit zorgde ervoor dat ik op het einde van mijn stage VOIP had gebruikt in combinatie met verschillende opstellingen en netwerken. Ik maakte gebruik van verschillende netwerkapparatuur van verschillende fabrikanten. De VOIP apparatuur was niet altijd van dezelfde fabrikant. En bij de meeste klanten was er wel een speciaal gebruik van het netwerk. Zo waren er netwerken waar IP camera bewaking, een heel automatiserings systeem, kassasystemen en zelf domotica over ging. Doordat VOIP gelijkaardig is aan normaal dataverkeer en geen gebruik maakt van de normale poorten, zorgt het niet voor conflicten met deze andere systemen.\\
+De enige manier hoe VOIP een conflict had met een andere technologie of een ander systeem, was als er een enorme netwerklast was en het netwerk deze niet aankon. VOIP zorgt voor een aantal sessies die op zich zorgen voor een gegevensstroom. Als er veel sessies( gesprekken) actief zijn dan zorgt dit voor een redelijke netwerklast. Als een netwerk dan al onder hoge last ligt en het netwerkapparatuur hier niet op voorzien is, dan kan dit zorgen voor een lage QOS. 
+\\ \\
+Tot slot kan ik stellen dat VOIP een makkelijke technologie is die niet moeilijk doet over andere gebruiken van het netwerk.
+
+\subsection{beveiligingsdreigingen}
+VOIP heeft verschillende dreigingen. Iemand kan het VOIP netwerk binnendringen om informatie te kunnen bemachtigen. Hij kan trachten authenticatiegegevens te bemachtigen om zo gebruik te maken van het VOIP netwerk. Of hij kan gewoon zorgen dat het VOIP netwerk verstoord wordt. Tijdens mijn stage toen ik informatie verzamelde hier rond heb ik bepaalde technieken zelf uitgetest. Ik merkte dat in netwerk omgevingen waar er geen vorm van beveiliging of splitsing was, dat het zeer makkelijk was om misbruik te maken. Pakketten afluisteren kan al een hele tijd, maar bij VOIP is het ook zeer makkelijk om deze te manipuleren. Gesprekken kunnen worden opgenomen en beluisterd. Ze kunnen worden gemanipuleerd zodat je nooit zeker bent wie er naar je belt. Zelf als je zelf naar iemand belt dan ben je niet zeker of je wel terechtkomt bij de persoon die je wil. 
+\\ \\
+Iemand met kwade bedoelingen kan voorkomen dat gesprekken starten, gesprekken verstoren en zelf beïndigen door DOS aanvallen. Zelf een geëncrypteerd VOIP netwerk kan nog last ondervinden van een aanvaller. En uiteindelijk kan een netwerkbeheerder die foute instellingen maakt op het netwerk er ook onwillig voor zorgen dat het VOIP verkeer hinder ondervindt.
+\\ \\
+Terwijl deze manieren van aanvallen makkelijk uit te voeren zijn is de beveiliging ertegen ook vrij eenvoudig. Ik leerde dat in de eerste plaats het VOIP afscheiden van het normale verkeer een zeer goede zet was. Zo neem je de aanvaller zijn toegang tot het VOIP verkeer af. Dit implementeerde we liefst door gebruik te maken van VLAN's. Na research naar VLAN's zag ik wel dat er enkele achterpoortjes waren die aandacht verdiende, en dat je soms mensen toegang moet geven tot het VOIP verkeer. 
+\\ \\
+De volgende stap om het geheel waterdicht te maken was het VOIP verkeer te encrypteren. Zo zorgden we ervoor dat een aanvaller die toegang krijgt tot het VOIP verkeer, geen informatie kan halen uit afgeluisterde pakketten. 
+\newpage
+Uiteindelijk is de veiligheid van ons VOIP verkeer zeer afhankelijk van de algemene beveiliging van het netwerk. En terwijl het perfect mogelijk is om ons VOIP verkeer te bescherme tegen elke mogelijke aanvals dreiging, is het altijd de vraag of we het wel zouden doen. De beste netwerkbeveiliging zowel intern als extern is enkel mogelijk met apparatuur die dit aankan. Kleine bedrijven met basis apparatuur zou dus een enorme investering moeten maken om al deze beveiligingen te implementeren.\\
+Zowel dat een bedrijf moet overwegen wat de voor- en nadelen zijn van VOIP, moet het deze ook overwegen van de beveiliging ervan. Zelf met de basis apparatuur is encrypteren meestal mogelijk. Om de extra stap te nemen naar VLAN's moet gekeken worden of de te beschermen informatie zo kritiek is dat ze de investering waard is. Voor kleine bedrijfjes zal het de investering niet waard zijn. Voor grote bedrijven met veel werknemers en zeer kritieke informatie zoals banken is deze investering bijna noodzakelijk.
+\subsection{VOIP met IPv6}
+Momenteel werkt VOIP perfect samen met IPv4. IPv6 zal minstens dezelfde mogelijkheden hebben, alleen zal het opnieuw ruimte maken voor verbetering. Momenteel zou VOIP zeer goed kunnen werken met IPv6. Maar met dat IPv6 nog nieuw is kunnen we ervan uitgaan dat er nog veel zal veranderen. Alleen de toekomst zal uitwijzen of de samenwerking van IPv6 en VOIP zal slagen maar momenteel ziet het er goed uit.
+\subsection{Slot}
+VOIP is een zeer interesante technologie. Het maakt onderdeel van een beweging waar zeer feel technologiën veranderen en over het internet kunnen gaan. Zoals eerder gezegt was VOIP vrij nieuw voor mij voor ik aan mij stage begon. Nu na de stage en het schrijven van deze proef ben ik er zeer in geïntereseerd en ga ik me verdiepen in andere vormen van unified communications.
+
 
 
 
@@ -555,6 +591,5 @@ Voorlopig kunnen we al stellen dat IPv6 functionaliteiten zal hebben op het gebi
 %%---------- Back matter -------------------------------------------------
 
 \listoffigures
-\listoftables
 
 \end{document}
